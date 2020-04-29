@@ -1,0 +1,1915 @@
+- https://www.codecademy.com/learn/paths/web-development
+- Cheatsheet https://www.codecademy.com/learn/paths/web-development/tracks/learn-html-web-dev-path/modules/learn-html-tables/cheatsheet
+- Guide: How to Become a Web Developer https://discuss.codecademy.com/t/guide-how-to-become-a-web-developer/394722
+30 weeks
+----------------------------------------------------------------------------------------------------
+1. Learn HTML
+    > Elements and Structure
+        Project: Fashion Blog (Inspect html) https://s3.amazonaws.com/codecademy-content/courses/learn-html/elements-and-structure/fashion.html
+    > Tables
+        Project: Wine Festival Schedule https://s3.amazonaws.com/codecademy-content/courses/learn-html-tables/index.html
+    > Forms
+        Project: Form a Story
+    > Learn Semantic HTML
+        Project: New York City Blog
+
+2. Styling a Website
+    > Selectors and Visual Rules
+        Project: Healthy Recipes
+        Project: Olivia Woodruff Portfolio
+    > Intro to Local Website Development
+
+3. Getting Started with JavaScript
+4. Getting More Advanced with Design
+5. JavaScript: Arrays, Loops, and Objects
+    > Re-creating the Lodash Library
+        Project: Lodash
+            Library documentation: https://lodash.com/docs/4.17.15
+
+6. Building Interactive JavaScript Websites
+7. Intermediate JavaScript
+8. Learn the Command Line
+9. Learn Git
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
+
+10. Building Front-end Applications with React
+    -------------------- Browser Compatibility and Transpilation --------------------
+    Update your web browser every few months -> browser compatibility issues, tools: 
+        caniuse.com
+        Babel   -   JS library to transpile ES6 to ES5.
+            Two required Babel packages:
+            > npm init  // to create a package.json file
+            > npm install babel-cli -D
+            > npm install babel-preset-env -D
+                The -D flag instructs npm to add each package to a property called devDependencies in package.json. 
+                Once the project’s dependencies are listed in devDependencies, other developers can run your 
+                project without installing each package separately. Instead, they can simply run 'npm install' — 
+                it instructs npm to look inside package.json and download all of the packages listed in devDependencies.
+            > touch .babelrc    // to specify the initial JS version inside of a file named .babelrc.
+                {
+                    "presets": ["env"]
+                }
+            In package,json add script:
+                "build": "babel src -d lib" // to transpile ES6+ code to ES5. 
+                                            // src — Instructs Babel to transpile all JS code inside the 'src' directory.
+                                            // -d — Instructs Babel to write the transpiled code to a directory.
+                                            // lib — Babel writes the transpiled code to a directory called 'lib'.
+            > npm run build
+
+    Transpilation is the process of converting one programming language to another.
+
+    ES6:
+        - ES5: var -> ES6: let, const
+        - In ES5, we used plus signs (+) to interpolate variables into strings. -> ES6 string interpolation
+        Template literals: const carbonara = `You can make carbonara with ${pasta}.`;
+
+    -------------------- JSX --------------------
+    React: fast, modular, scalable, flexible, popular.
+
+    const h1 = <h1>Hello world</h1>;    // The part that looks like HTML, <h1>Hello world</h1>, is called JSX.
+    JSX is a syntax extension for JavaScript. If a JavaScript file contains JSX code, then that file will have to be compiled. 
+    That means that before the file reaches a web browser, a JSX compiler will translate any JSX into regular JavaScript.
+    -> Wrap the multi-line JSX expression in parentheses:
+        const theExample = (                        // can be saved as variables, object, passed to f-ns etc.
+            <a href="https://www.example.com">
+                <h1>
+                Click me!
+                </h1>
+            </a>
+        )
+    -> JSX expression must have exactly one outermost element. Simple solution: wrap the JSX expression in a <div></div>
+    -> To render a JSX expression means to make it appear onscreen.
+        ReactDOM.render(<h1>Hello world</h1>, document.getElementById('app'));
+            ReactDOM is the name of a JavaScript library. 
+    -> ReactDOM.render()‘s first argument should evaluate to a JSX expression, it doesn’t have to literally be a JSX expression.
+        const toDoList = (
+            <ol>
+                <li>Learn React</li>
+                <li>Become a Developer</li>
+            </ol>
+        );
+        ReactDOM.render(toDoList, document.getElementById('app'));
+    -> The Virtual DOM
+        One special thing about ReactDOM.render() is that it only updates DOM elements that have changed.
+        That means that if you render the exact same thing twice in a row, the second render will do nothing.
+        React accomplishes this thanks to something called the virtual DOM. 
+    -> Advanced JSX: class vs className
+        - class -> className
+        - Self-Closing Tags
+            In HTML, it is optional to include a forward-slash immediately before the final angle-bracket: <br> or <br />
+            In JSX, you have to include the slash: <br />
+        - Curly Braces in JSX
+            Any code in between the tags of a JSX element will be read as JSX, not as regular JS: <h1>{2+3}</h1> // 2+3
+            Everything inside of the curly braces will be treated as regular JS: <h1>{2+3}</h1> //6
+        - Variables in JSX
+            const name = 'Gerdo';   // Declare a variable:
+            const greeting = <p>Hello, {name}!</p>; // Access your variable from inside of a JSX expression
+        - Variable Attributes in JSX
+            const pics = {
+                panda: "http://bit.ly/1Tqltv5",
+                owl: "http://bit.ly/1XGtkM3",
+                owlCat: "http://bit.ly/1Upbczi"
+            }; 
+            const panda = (
+                <img src={pics.panda} 
+                alt="Lazy Panda" />
+            );
+        - Event Listeners in JSX
+            An event listener attribute’s name should be something like onClick or onMouseOver: the word on, plus the type of event that you’re listening for.
+            List of valid events: https://reactjs.org/docs/events.html#supported-events
+            An event listener attribute’s value should be a function.
+            Note that in HTML, event listener names are written in all lowercase, such as onclick or onmouseover. In JSX, event listener names are written in camelCase, such as onClick or onMouseOver.
+                function myFunc() {
+                    alert('Make myFunc the pFunc... omg that was horrible i am so sorry');
+                }
+                <img onClick={myFunc} />
+        - JSX Conditionals: 
+            - If Statements     - works when the words if and else are not injected in between JSX tags.
+                if (user.age >= drinkingAge) {
+                    message = (
+                        <h1>
+                        Hey, check out this alcoholic beverage!
+                        </h1>
+                    );
+                    } else {
+                    message = (
+                        <h1>
+                        Hey, check out these earrings I got at Claire's!
+                        </h1>
+                    );
+                }
+            - The Ternary Operator
+                const headline = (
+                    <h1>
+                        { age >= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+                    </h1>
+                );
+            - &&
+                const tasty = (
+                    <ul>
+                        <li>Applesauce</li>
+                        { !baby && <li>Pizza</li> }
+                        { age > 15 && <li>Brussels Sprouts</li> }
+                        { age > 20 && <li>Oysters</li> }
+                        { age > 25 && <li>Grappa</li> }
+                    </ul>
+                );
+        - .map in JSX
+            const strings = ['Home', 'Shop', 'About Me'];
+            const listItems = strings.map(string => <li>{string}</li>);
+            <ul>{listItems}</ul>
+        - Keys
+            A key is a JSX attribute. The attribute’s name is key. The attribute’s value should be something unique, similar to an id attribute.
+            keys don’t do anything that you can see! React uses them internally to keep track of lists. If you don’t use keys when you’re supposed to, React might accidentally scramble your list-items into the wrong order.
+            Not all lists need to have keys. If you aren’t sure then it never hurts to use them! 
+            A list needs keys if either of the following are true:
+                1.The list-items have memory from one render to the next. For instance, when a to-do list renders, each item must “remember” whether it was checked off. The items shouldn’t get amnesia when they render.
+                2.A list’s order might be shuffled. For instance, a list of search results might be shuffled from one render to the next.
+
+                const peopleLis = people.map((person, i) =>
+                    <li key={'person_' + i}>{person}</li>
+                );
+        - React.createElement
+            You can write React code without using JSX at all!
+                The following JSX expression:
+                    const h1 = <h1>Hello world</h1>;
+                can be rewritten without JSX, like this:
+                    const h1 = React.createElement(
+                        "h1",
+                        null,
+                        "Hello, world"
+                    );
+            When a JSX element is compiled, the compiler transforms the JSX element into the method: React.createElement(). Every JSX element is secretly a call to React.createElement().
+        
+    -------------------- React Components --------------------
+    React class component:
+        import React from 'react';                          // creates js object, create a variable named React, get the React library. You’ve already seen one of the methods contained in the React library: React.createElement(). 
+        import ReactDOM from 'react-dom';                   // creates another js object
+        class MyComponentClass extends React.Component {    // Component class variable names must begin with capital letters!
+            render() {                                      // A render method is a property whose name is render, and whose value is a function.
+                return <h1>Hello world</h1>;                // A render method must contain a return statement. Usually, this return statement returns a JSX expression:
+            }
+        };
+        ReactDOM.render(<MyComponentClass />, document.getElementById('app'));  // component instance. JSX elements can be either HTML-like, or component instances. ReactDOM.render() will tell <MyComponentClass /> to call its render method.
+
+    Multi-line JSX expression should always be wrapped in parentheses.
+
+    Variable Attribute in a Component
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        const redPanda = {
+            src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Endangered_Red_Panda.jpg',
+            alt: 'Red Panda',
+            width:  '200px'
+        };
+        class RedPanda extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1>Cute Red Panda</h1>
+                        <img 
+                        src={redPanda.src}
+                        alt={redPanda.alt}
+                        width={redPanda.width} />
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<RedPanda />, document.getElementById('app'));
+    
+    Put Logic in a Render Function
+        class Random extends React.Component {
+            render() {
+                const n = Math.floor(Math.random() * 10 + 1);   // This should be in the render function!!! it should not be part of the class declaration itself, but should occur in a method like render().
+                return <h1>The number is {n}!</h1>;
+            }
+        }
+    
+    Use a Conditional in a Render Function
+        class TodaysPlan extends React.Component {
+            render() {
+                let task;
+                if (!apocalypse) {
+                    task = 'learn React.js'
+                } else {
+                    task = 'run around'
+                }
+                return <h1>Today I am going to {task}!</h1>;
+            }
+        }
+
+    Use this in a Component
+        class IceCreamGuy extends React.Component {
+            get food() {
+                return 'ice cream';
+            }
+            render() {
+                return <h1>I like {this.food}.</h1>;    // this refers to an instance of IceCreamGuy. You don’t need parentheses (e.g. this.food()) because .food is a getter method.
+            }
+        }
+
+    Use an Event Listener in a Component
+        class MyClass extends React.Component {
+            myFunc() {
+                alert('Stop it.  Stop hovering.');
+            }
+            render() {
+                return (
+                <div onHover={this.myFunc}>     // Event handler is a fn that gets called in response to an event, e.g. myFunc().
+                </div>
+                );
+            }
+        }
+    
+    Project: Authorization Form
+        // Contact.js
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        class Contact extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    password: 'swordfish',
+                    authorized: false
+                };
+                this.authorize = this.authorize.bind(this);
+            }
+
+            authorize(e) {
+                const password = e.target.querySelector('input[type="password"]').value;
+                const auth = password == this.state.password;
+                this.setState({
+                    authorized: auth
+                });
+            }
+
+            render() {
+                const login = (
+                    <form action='#' onSubmit={this.authorize}>
+                        <input type="password" placeholder="Password" />
+                        <input type="submit"/>
+                    </form>
+                );
+                const contactInfo = (
+                    <ul>
+                        <li>
+                            client@example.com
+                        </li>
+                        <li>
+                            555.555.5555
+                        </li>
+                    </ul>
+                );
+                return (
+                    <div id="authorization">
+                        <h1>{ this.state.authorized ? 'Contact' : 'Enter the Password' }</h1> 
+                        {this.state.authorized ? contactInfo : login}
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<Contact />, document.getElementById('app'));
+
+
+    -------------------- React Development Setup and Ravenous: part 1 --------------------
+    CLI
+        Bash is the default shell for Linux and Mac (more popular).
+        Windows has a different CLI, called Command Prompt. To use Bash on a Windows computer, download and install a program called Git Bash. 
+
+    Node
+        > which node    //  print the filepath to Node, e.g. /Users/serhii/.nvm/versions/node/v13.13.0/bin/node
+        > node -v       // e.g. v13.13.0
+
+    Creating a React App
+        > npm install -g create-react-app   // install the create-react-app node module
+        > create-react-app <name-of-app>
+
+        React app structure:
+            .gitignore
+            README.md
+            node_modules
+            package-lock.json   // This file contains the exact dependency tree installed in node_modules/. This provides a way for teams working on private apps to ensure that they have the same version of dependencies and sub-dependencies. It also contains a history of changes to package.json, so you can quickly look back at dependency changes.
+            package.json    
+            public              // This directory contains assets that will be served directly without additional processing by webpack. index.html provides the entry point for the web app. 
+            src                 // This contains the JavaScript that will be processed by webpack and is the heart of the React app. Browsing this folder, you see the main App JavaScript component (App.js), its associated styles (App.css), and test suite (App.test.js). index.js and its styles (index.css) provide an entry into the App and also kicks off the registerServiceWorker.js. This service worker takes care of caching and updating files for the end-user. It allows for offline capability and faster page loads after the initial visit. 
+
+            As your React app grows, it is common to add
+                components/ directory to organize components and component-related files and  
+                views directory to organize React views and view-related files.
+
+        Starting the React app development server
+            > npm start     // http://localhost:3000/
+
+    React Developer Tools
+        Install React Developer Tools   // Chrome extension to help with debugging React Apps: to inspect React components, view their properties, and interact with them while looking at the application in Google Chrome.
+            Modify Components with Javascript: select the main <App> component in React Developer Tools. You’ll see that it appends == $r to the right side of the component name in the tree. Now, if you switch over to the console view, you can access this component using $r. By logging $r, you can see that this is indeed the component selected in the React tab. You can do things like access its state, update its state, and access its props:
+                &r
+                &r.setState({foo:"bar"})
+                &r.state
+                &r.props
+
+    Project: build a website called “Ravenous”, a Yelp-like clone.
+        In total, there will be four parts to this project:
+            1.Creating Static Components
+            2.Passing Information to Components
+            3.Setting the State of Ravenous Components
+            4.Interacting with the Yelp API
+
+    -------------------- Components Interacting --------------------
+    -------------------- Ravenous: Part 2 --------------------
+    -------------------- Stateless Components From Stateful Components --------------------
+    -------------------- Ravenous: Part 3 --------------------
+    -------------------- Ravenous: Part 4 --------------------
+    -------------------- Advanced React --------------------
+    -------------------- Lifecycle Methods --------------------
+    -------------------- Project: Jammming --------------------
+    
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
+
+11. JavaScript Back-End Development
+    In order to have consistent ways of interacting with data, a back-end will often include a web API. 
+    API stands for Application Program Interface and can mean a lot of different things, but 
+    a web API is a collection of predefined ways of, or rules for, interacting with a web application’s data, 
+    often through an HTTP request-response cycle. 
+
+    Two other concepts we’ll want our server-side logic to handle are authentication and authorization.
+        Authentication:
+        - use logins with usernames and passwords (need to be securely stored in the back-end on a database).  
+        - use external resources for authentication.
+
+    There are numerous back-end frameworks:
+        PHP: Laravel
+        JS: Express.js
+        Ruby: Ruby on Rails
+        Java: Spring, JSF
+        Python: Flask, Django
+
+    The collection of technologies used to create the front-end and back-end of a web application is referred to as a stack. This is where the term full-stack developer comes from.
+    The MEAN stack is a technology stack for building web applications that uses MongoDB, Express.js, AngularJS, and Node.js.
+    The LAMP Stack uses Linux, Apache, MySQL, and PHP.
+
+    -------------------- Node.js --------------------
+    Node.js is a JavaScript runtime, or an environment that allows us to execute JavaScript code outside of the browser.
+    > node -v
+
+    REPL is an abbreviation for read–eval–print loop. It’s a program that loops, or repeatedly cycles, through 
+    three different states: a read state where the program reads input from a user, the eval state where the 
+    program evaluates the user’s input, and the print state where the program prints out its evaluation to a 
+    console. Then it loops through these states again.
+    When you install Node, it comes with a built-in JavaScript REPL. You can access the REPL by:
+    > node
+    > global    // or console.log(global)
+    > Object.keys(global)
+        [
+            'global',
+            'process,
+            'Buffer',
+            'clearImmediate',
+            'clearInterval',
+            'clearTimeout',
+            'setImmediate',
+            'setInterval',
+            'setTimeout',
+            'console',
+            'module',
+            'require'
+        ]
+    > node myFile.js
+
+    Process
+    In computer science, a process is the instance of a computer program that is being executed. 
+    To see information about the various processes running on your computer right now:
+        Windows machine: Task Manager
+        Mac: Activity Monitor
+    
+    - process.env property is an object which stores and controls information about the environment in which the process is currently running. 
+        if (process.env.NODE_ENV === 'development'){
+            console.log('Testing! Testing! Does everything work?');
+        }
+    - process.memoryUsage()
+    - process.memoryUsage().heapUsed
+        Heap can mean different things in different contexts: 
+            a heap can refer to a specific data structure, but 
+            it can also refer to the a block of computer memory.
+    - process.argv    
+        > node myProgram.js testing several features
+        > console.log(process.argv[3]); // Prints 'several'  
+
+    1) Core Modules
+        let events = require('events');
+    2) Local Modules
+        // dog.js
+        module.exports = class Dog {
+            constructor(name) {
+                this.name = name;
+            }
+            praise() {
+                return `Good dog, ${this.name}!`;
+            }
+        };
+        // app.js
+        let Dog = require('./dog.js');
+        const tadpole = new Dog('Tadpole');
+        console.log(tadpole.praise());
+    3) Third-party modules
+        npm: express, react, nodemon
+
+    Event-Driven Architecture
+        let events = require('events');
+        let myEmitter = new events.EventEmitter();
+        let newUserListener = (data) => {console.log(`We have a new user: ${data}.`);};
+        myEmitter.on('new user', newUserListener)   // Assign the newUserListener function as the listener callback for 'new user' events
+        myEmitter.emit('new user', 'Lily Pad') //newUserListener will be invoked with 'Lily Pad' // Emit a 'new user' event
+
+        The synchronous code from the while-loop will always fill the stack!  If we wanted to avoid the infinite 
+        loop, we could replace the while-loop with an asynchronous function— e.g., the Node setInterval() API.
+        Note: The modern way of handling asynchronous tasks is through JavaScript Promises 
+        (developers also favor the newer async...await syntax). 
+    
+    User Input/Output
+        process.stdin.on('data', (userInput) => {
+            let input = userInput.toString()
+            console.log(input)
+        });
+
+    Errors
+        - EvalError
+        - SyntaxError
+        - RangeError
+        - ReferenceError
+        - TypeError
+        - URIError
+
+        Error handling techniques such as try...catch statements.
+
+        Error-first callback functions:
+            const errorFirstCallback = (err, data)  => {
+                if (err) {
+                    console.log(`There WAS an error: ${err}`);
+                } else {
+                    // err was falsy
+                    console.log(`There was NO error. Event data: ${data}`);
+                }
+            }
+
+    Filesystem
+        When running JavaScript code on a browser, it’s important for a script to have only limited access to a 
+        user’s filesystem. This technique of isolating some applications from others is known as sandboxing. 
+        Sandboxing protects users from malicious programs and invasions of privacy.
+
+        const fs = require('fs');   
+        let readDataCallback = (err, data) => {     // error-first callback function
+            if (err) {
+                console.log(`Something went wrong: ${err}`);
+            } else {
+                console.log(`Provided file contained: ${data}`);
+            }
+        };
+        fs.readFile('./file.txt', 'utf-8', readDataCallback);
+
+    Create an HTTP Server
+        http module
+        http.createServer() method returns an instance of an http.server. 
+        http.server has a method .listen() which causes the server to “listen” for incoming connections. 
+
+        EXAMPLE 1. Start a web server which only serve the string ‘Hello World!\n
+        const http = require('http');
+        let requestListener = (request, response) => {
+            response.writeHead(200, {'Content-Type': 'text/plain' });
+            response.write('Hello World!\n');
+            response.end();
+        };
+        const server = http.createServer(requestListener);
+        server.listen(3000);
+
+        Visit http://localhost:3000/
+
+        EXAMPLE 2. Start a web server which serve some HTML
+        // app.js
+        const http = require('http');
+        let {requestListener} = require('./callbackFile.js');
+        const PORT = process.env.PORT || 4001;
+        let server = http.createServer(requestListener)
+        server.listen(PORT)
+
+        // callbackFile.js
+        const fs = require('fs');
+        module.exports = {
+            requestListener: (req, res) => {
+                fs.readFile('./myWebsite.html',  'utf-8', (err, data) => {
+                    if (err){
+                        res.writeHead(200, {'Content-Type': 'text/html'});
+                        res.write(`${err}`);
+                        res.end();
+                    } else {
+                        res.writeHead(200, {'Content-Type': 'text/html'});
+                        res.write(data);
+                        res.end(); 
+                    }
+                })
+            }
+        }
+
+        // myWebsite.html
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>My Website</title>
+        </head>
+
+        <body>
+            <h1>I'm hosting this website with my own Node web server</h1>
+            <h2>Pretty exciting stuff...</h2>              
+        </body>
+
+        </html>
+
+    -------------------- Express --------------------
+    -------------------- REST (REpresentational State Transfer) --------------------
+    REST is an architectural style for providing standards between computer systems on the web, making it easier 
+    for systems to communicate with each other. REST-compliant systems, often called RESTful systems, are 
+    characterized by how they are stateless and separate the concerns of client and server. 
+    - Separation of Client and Server
+    - Statelessness
+
+    1) Client make Request:
+    A request generally consists of:
+        - an HTTP verb, which defines what kind of operation to perform
+            GET — retrieve a specific resource (by id) or a collection of resources
+            POST — create a new resource
+            PUT — update a specific resource (by id)
+            DELETE — remove a specific resource by id
+        - a header, which allows the client to pass along information about the request
+            Accept parameters(type/subtype):
+                text/html, text/css, text/plain
+                image/png, image/jpeg, image/gif
+                audio/wav, image/mpeg
+                video/mp4, video/ogg
+                application/json, application/pdf, application/xml, application/octet-stream
+        - a path to a resource
+        - an optional message body containing data
+    
+    2) Server Sending Responses
+        Content Types
+        Response Codes
+                     Status code	                Meaning
+            GET, PUT 200 (OK)	                standard response for successful HTTP requests.
+            POST     201 (CREATED)	            standard response for an HTTP request that resulted in an item being successfully created.
+            DELETE   204 (NO CONTENT)	        standard response for successful HTTP requests, where nothing is being returned in the response body.
+                     400 (BAD REQUEST)	        The request cannot be processed because of bad request syntax, excessive size, or another client error.
+                     403 (FORBIDDEN)	            The client does not have permission to access this resource.
+                     404 (NOT FOUND)	            The resource could not be found at this time. It is possible it was deleted, or does not exist yet.
+                     500 (INTERNAL SERVER ERROR)	The generic answer for an unexpected failure if there is no more specific information available.
+
+    Examples:
+    To view all customers:
+        request
+            GET http://fashionboutique.com/customers    or GET http://fashionboutique.com/customers/123
+            Accept: application/json
+        response    
+            Status Code: 200 (OK)
+            Content-type: application/json
+    To create a new customer:
+        request
+            POST http://fashionboutique.com/customers
+            Body:
+            {
+                “customer”: {
+                    “name” = “Scylla Buss”
+                    “email” = “scylla.buss@codecademy.org”
+                }
+            }
+        response    
+            201 (CREATED)
+            Content-type: application/json
+    To update that customer:
+        request
+            PUT http://fashionboutique.com/customers/123
+            Body:
+                {
+                “customer”: {
+                    “name” = “Scylla Buss”
+                    “email” = “scyllabuss1@codecademy.com”
+                }
+            }
+        response    
+            Status Code: 200 (OK)
+    To delete that customer:
+        request
+            DELETE http://fashionboutique.com/customers/123
+        response    
+            Status Code: 204 (NO CONTENT)
+
+    Practice with REST
+        The site has an index.html and a style.css. Each user has a username and a password. Each photo has a venue and an owner. Each venue has a name and street address. 
+        Can you design a REST system that would accommodate:
+        - storing users, photos, and venues
+        - accessing venues and accessing certain photos of a certain venue
+
+        Possible Solution - Models
+        {
+            “user”: {
+                "id": <Integer>,
+                “username”: <String>,
+                “password”:  <String>
+            }
+        }
+            {
+            “photo”: {
+                "id": <Integer>,
+                “venue_id”: <Integer>,
+                “author_id”: <Integer>
+            }
+        }
+            {
+            “venue”: {
+                "id": <Integer>,
+                “name”: <String>,
+                “address”: <String>
+            }
+        }
+        Possible Solution - Requests/Responses
+        GET Requests
+        Request- GET /index.html Accept: text/html Response- 200 (OK) Content-type: text/html
+        Request- GET /style.css Accept: text/css Response- 200 (OK) Content-type: text/css
+        Request- GET /venues Accept:application/json Response- 200 (OK) Content-type: application/json
+        Request- GET /venues/:id Accept: application/json Response- 200 (OK) Content-type: application/json
+        Request- GET /venues/:id/photos/:id Accept: application/json Response- 200 (OK) Content-type: image/png
+
+        POST Requests
+        Request- POST /users Response- 201 (CREATED) Content-type: application/json
+        Request- POST /venues Response- 201 (CREATED) Content-type: application/json
+        Request- POST /venues/:id/photos Response- 201 (CREATED) Content-type: application/json
+
+        PUT Requests
+        Request- PUT /users/:id Response- 200 (OK)
+        Request- PUT /venues/:id Response- 200 (OK)
+        Request- PUT /venues/:id/photos/:id Response- 200 (OK)
+
+        DELETE Requests
+        Request- DELETE /venues/:id Response- 204 (NO CONTENT)
+        Request- DELETE /venues/:id/photos/:id Response- 204 (NO CONTENT)
+
+        -------------------- Express Routes --------------------
+        const express = require('express');
+        const app = express();
+        const PORT = 4001;
+        app.use(express.static('public'));  // optional. This is used to make sure that once the server is started, you can reload the browser.
+        app.listen(PORT, () => {
+            console.log(`Server is listening on port ${PORT}`);
+        });
+
+        Example: GET request (app.get), path. .send() response.
+            const moods = [{ mood: 'excited about express!'}, { mood: 'route-tastic!' }];
+            app.get('/moods', (req, res, next) => {
+                // Here we would send back the moods array in response
+                res.send(moods);
+            });
+
+        Express servers send responses using the .send() method on the response object. .send() will take any input and include it in the response body.
+        In addition to .send(), .json() can be used to explicitly send JSON-formatted responses. .json() sends any JavaScript object passed into it.
+        
+        If there are no matching routes registered, or the Express server has not sent a response at the end of all 
+        matched routes, it will automatically send back a 404 Not Found response, meaning that no routes were 
+        matched or no response was ultimately sent by the registered routes.
+
+        Getting A Single Expression
+            const monsters = { hydra: { height: 3, age: 4 }, dragon: { height: 200, age: 350 } };
+            // GET /monsters/hydra
+            app.get('/monsters/:name', (req, res, next) => {
+                console.log(req.params) // { name: 'hydra' };
+                res.send(monsters[req.params.name]);
+            });
+
+        Setting Status Codes
+        The res object has a .status() method to allow us to set the status code, and other methods like .send() can be chained from it.
+            const monsterStoreInventory = { fenrirs: 4, banshees: 1, jerseyDevils: 4, krakens: 3 };
+            app.get('/monsters-inventory/:name', (req, res, next) => {
+                const monsterInventory = monsterStoreInventory[req.params.name];
+                if (monsterInventory) {
+                    res.send(monsterInventory);
+                } else {
+                    res.status(404).send('Monster not found');
+                }
+            });
+
+        Other HTTP methods: PUT, POST, and DELETE. Express methods: app.put(), app.post(), and app.delete().
+        Query strings appear at the end of the path in URLs, and they are indicated with a ? character. 
+        e.g., in /monsters/1?name=chimera&age=1, the query string is name=chimera&age=1 and the path is /monsters/1/
+        Query strings do not count as part of the route path. Instead, the Express server parses them into an object 
+        and attaches it to the request body as req.query. e.g., the req.query object { name: 'chimera', age: '1' }.
+            
+            const monsters = { '1': { name: 'cerberus', age: '4'  } };
+            // PUT /monsters/1?name=chimera&age=1
+            app.put('/monsters/:id', (req, res, next) => {
+                const monsterUpdates = req.query;
+                monsters[req.params.id] = monsterUpdates;
+                res.send(monsters[req.params.id]);
+            });
+
+
+            const expressions = [];
+            app.post('/expressions', (req, res, next) => {
+                const receivedExpression = createElement('expressions', req.query);
+                if (receivedExpression) {
+                    expressions.push(receivedExpression);
+                    res.status(201).send(receivedExpression);
+                } else {
+                    res.status(400).send();
+                }
+            });
+
+            app.delete('/expressions/:id', (req, res, next) => {
+                const expressionIndex = getIndexById(req.params.id, expressions);
+                if (expressionIndex !== -1) {
+                    expressions.splice(expressionIndex, 1);
+                    res.status(204).send();
+                } else {
+                    res.status(404).send();
+                }
+            });
+
+    Now you have all the tools you need to create a basic CRUD API! 
+    With these skills and knowledge of the HTTP request-response cycle, you could implement an API for any project needing CRUD functionality. 
+    You could build a trip planner, an address book, a grocery list, an image-sharing application, an anonymous message board, the sky’s the limit!
+
+    app.js is getting too big! -> Solution: Express provide Routers -> Refactoring: separate our application into a file to handle all /expressions routes, and another to handle all /animals routes.
+
+    We invoke .Router() method on the top-level Express import. To use a router, we mount it at a certain path using app.use() and pass in the router as the second argument. 
+
+        const express = require('express');
+        const app = express();
+        const monsters = {
+            '1': {
+                name: 'godzilla',
+                age: 250000000
+            },
+            '2': {
+                Name: 'manticore',
+                age: 21
+            }
+        }
+        const monstersRouter = express.Router();
+        app.use('/monsters', monstersRouter);   
+        monstersRouter.get('/:id', (req, res, next) => {    // monstersRouter.get('/:id') matches the full path /monsters/:id.
+            const monster = monsters[req.params.id];
+            If (monster) {
+                res.send(monster);
+            } else {
+                res.status(404).send();
+            }
+        });
+
+    Generally, we will keep each router in its own file, and require them in the main application. 
+
+        // monsters.js
+        const express = require('express');
+        const monstersRouter = express.Router();
+
+        const monsters = {
+            '1': {
+                name: 'godzilla',
+                age: 250000000
+            },
+            '2': {
+                Name: 'manticore',
+                age: 21
+            }
+        }
+        monstersRouter.get('/:id', (req, res, next) => {
+            const monster = monsters[req.params.id];
+            if (monster) {
+                res.send(monster);
+            } else {
+                res.status(404).send();
+            }
+        });
+        module.exports = monstersRouter;
+
+
+        // main.js
+        const express = require('express');
+        const app = express();
+        const monstersRouter = require('./monsters.js');
+        app.use('/monsters', monstersRouter);
+
+    -------------------- Express Middleware --------------------
+    Terms: code quality, code duplication, “Don’t Repeat Yourself” (DRY).
+    Middleware is code that executes between a server receiving a request and sending a response.
+    In Express, middleware is a function. Middleware can perform logic on the request and response objects, such as: 
+        - inspecting a request, 
+        - performing some logic based on the request, 
+        - attaching information to the response, 
+        - attaching a status to the response, 
+        - sending the response back to the user, or 
+        - simply passing the request and response to another middleware.
+
+    Example of middleware in action:
+        app.use((req, res, next) => {       // app.use() takes a callback function that it will call for every received request.
+            console.log('Request received');
+            // console.log(`${req.method} Request Received`);   // req.method property equal to the verb of the request!
+        });
+    
+    An Express middleware is a function with three parameters: (req, res, next). The third argument to a 
+    middleware function, next, should get explicitly called as the last part of the middleware’s body. 
+    Express routes are middleware.
+    
+        app.use((req, res, next) => {
+            console.log("A sorcerer approaches!");
+            next();
+        });
+        app.get('/magic/:spellname', (req, res, next) => {
+            console.log("The sorcerer is casting a spell!");
+            next();
+        });
+        app.get('/magic/:spellname', (req, res, next) => {
+            console.log(`The sorcerer has cast ${req.params.spellname}`);
+            res.status(200).send();
+        });
+        app.get('/magic/:spellname', (req, res, next) => {
+            console.log("The sorcerer is leaving!");
+        });
+        // Accessing http://localhost:4001/magic/fireball 
+        // Console Output:
+        // "A sorcerer approaches!"
+        // "The sorcerer is casting a spell!"
+        // "The sorcerer has cast fireball"
+
+    In documentation for many programming languages, optional arguments for functions are placed in square brackets ([]). 
+        app.use([path,] callback [, callback...])
+
+        app.use('/sorcerer', (req, res, next) => {
+            console.log('User has hit endpoint /sorcerer');
+            next();
+        });
+        In the example above the console will print 'User has hit endpoint /sorcerer', if someone visits our 
+        web page’s ‘/sorcerer’ endpoint. Since the method app.use() was used, it won’t matter if the user is 
+        performing a GET,a POST, or any other kind of HTTP request. Since the path was given as an argument 
+        to app.use(), this middleware function will not execute if the user hits a different path 
+        (for instance: '/spells' or '/sorcerer/:sorcerer_id').
+
+        next is called at the end of the middleware callback function. 
+        Methods such as app.use(), app.get(), app.post(), and so on all can take multiple callbacks as additional parameters.
+            app.get('/spells/:id', authenticate, getSpell);
+            app.post('/spells', authenticate, validateData, createSpell);
+            app.put('/spells/:id', authenticate, validateData, updateSpell);
+        
+        
+        https://github.com/expressjs/morgan#api
+        morgan, an open-source library for logging information about the HTTP request-response cycle in a 
+        server application. morgan() is a function that will return a middleware function, to reiterate: 
+        the return value of morgan() will be a function, that function will have the function signature 
+        (req, res, next) that can be inserted into an app.use(), and that function will be called before all 
+        following middleware functions. 
+
+        const morgan = require('morgan')
+        // Replace your logging middleware
+            app.use((req, res, next) => {
+                console.log(`${req.method} Request Received`);
+                next();
+            });
+        // with morgan('tiny').
+            app.use((req, res, next) => {
+                morgan('tiny');
+            });
+
+        // Logging Middleware
+        app.use(morgan('dev'));
+        // Body Parsing Middleware
+        app.use(bodyParser.json())
+        // Error-Handling Middleware
+        app.use((err, req, res, next) => {
+            const status = err.status || 500;
+            res.status(status).send(err.message);
+        });
+        Error handling middleware needs to be the last app.use() in your file. 
+        If an error happens in any of our routes, we want to make sure it gets passed to our error handler. 
+        The middleware stack progresses through routes as they are presented in a file, therefore the error handler should sit at the bottom of the file.
+        // Replace
+            if (!jellybeanBag[beanName]) {
+                return res.status(404).send('Bean with that name does not exist');
+            }
+        // with
+            if (!jellybeanBag[beanName]) {
+                const error = new Error('Bean with that name does not exist')
+                error.status = 404;
+                return next(error);
+            }
+
+        List of Express Middleware https://expressjs.com/en/resources/middleware.html
+
+        router.param()
+            app.param('spiceRackId', (req, res, next, id) => {
+                const idToFind = Number(id);
+                const rackIndex = spiceRacks.findIndex(spiceRack => spiceRack.id === idToFind);
+                if (rackIndex !== -1) {
+                    req.spiceRack = spiceRacks[rackIndex];
+                    req.spiceRackIndex = rackIndex;
+                    next();
+                } else {
+                    res.status(404).send('Spice Rack Not Found.');
+                }
+            });
+            app.get('/spice-racks/:spiceRackId', (req, res, next) => {
+                res.send(req.spiceRack);
+            });
+        Merge Parameters:
+            const sorcererRouter = express.Router();
+            const familiarRouter = express.Router({mergeParams: true});
+            sorcererRouter.use('/:sorcererId/familiars', familiarRouter);
+            sorcererRouter.get('/', (req, res, next) => {
+                res.status(200).send(Sorcerers);
+                next();
+            });
+            sorcererRouter.param('sorcererId', (req, res, next, id) => {
+                const sorcerer = getSorcererById(id);   
+                req.sorcerer = sorcerer;
+                next();
+            });
+            familiarRouter.get('/', (req, res, next) => {
+                res.status(200).send(`Sorcerer ${req.sorcerer} has familiars ${getFamiliars(sorcerer)}`);
+            });
+            app.use('/sorcerer', sorcererRouter);
+
+    -------------------- Unit Testing with Mocha and Chai --------------------
+    Unit testing means testing the behavior of code in small, independent units.
+    This is in comparison of integration testing, in which a set of modules are tested as a group.
+    Mocha and Chai are two JavaScript frameworks commonly used together for unit testing.
+    
+    Mocha is a testing framework that provides functions that are executed according in a specific order, and that logs their results to the terminal window.
+    When you read tests written in Mocha, you’ll see regular use of the keywords describe and it.
+    A test suite is a collection of tests all relating to a single functionality or behavior. 
+    A test case(often called ‘specs’) or a unit test is a single description about the desired behavior of the code that either passes or fails. 
+    Test suites are batched underneath the 'describe' keyword, and test cases are batched under the 'it' keyword.
+
+    The base component of test cases are assertions. Assertions are tied to particular values (whereas test cases are descriptions of behavior) and they will fail if the expected value does not match the actual value.
+    The words 'should', 'expect', and 'assert' in the tests indicate that an assertion is being made.
+
+    Chai is an assertion library that is often used alongside Mocha. 
+    It provides functions and methods that help you compare the output of a certain test with its expected value.
+    Example of a Chai assertion: expect(exampleArray).to.have.lengthOf(3);
+    Try appending .only() or .skip() to your describe or it blocks in order to only run certain tests or skip other certain tests.
+    The end of the log for a failed test case provides a number like 12:18. This indicates that the failed assertion started at line 12, character 18. 
+
+
+    Hook - a function that is called at certain points in the lifecycle of the process that it is running in.
+
+    -------------------- CORS --------------------
+        security policies:
+            - same-origin       a document (i.e., like a web page) hosted on server A can only interact with other documents that are also on server A. 
+                                An origin is made up of the following three parts: the protocol, host, and port number.
+            - cross-origin, which has evolved into the cross-origin resource sharing standard(CORS).
+                                A request for a resource (like an image or a font) outside of the origin is known as a cross-origin request.       
+                                CORS allows servers to specify who (i.e., which origins) can access the assets on the server, among many other things.                                
+                                Most servers will allow GET requests. HTTP requests methods like PATCH, PUT, or DELETE, however, may be denied to prevent malicious behavior.
+                                With CORS, a server can specify who can access its assets and which HTTP request methods are allowed from external resources.
+                                The CORS standard manages cross-origin requests by adding new HTTP headers to the standard list of headers:
+                                    -> Access-Control-Allow-Origin
+                                            Many times, this value will be *, meaning that Server A will share the requested resources with any domain on the Internet. 
+                                            Other times, the value of this header may be set to a particular domain (or list of domains), meaning that Server A will share its resources with that specific domain (or list of domains).
+                                    - Access-Control-Allow-Credentials
+                                    - Access-Control-Allow-Headers
+                                    - Access-Control-Allow-Methods
+                                    - Access-Control-Expose-Headers
+                                    - Access-Control-Max-Age
+                                    - Access-Control-Request-Headers
+                                    - Access-Control-Request-Method
+                                    - Origin
+    How do I implement CORS?
+    Implementing the request headers to set up CORS correctly depends on the language and framework of the backend.
+    In Node:    response.setHeader('Content-Type', 'text/html');
+    In Express(use CORS middleware):    
+        > npm install cors
+        var express = require('express');
+        var cors = require('cors');
+        var app = express();
+        app.use(cors());
+        app.get('/hello/:id', function (req, res, next) {
+            res.json({msg: 'Hello world, we are CORS-enabled!'});
+        });
+        app.listen(80, function () {
+            console.log('CORS-enabled web server is listening on port 80');
+        });    
+
+    -------------------- Cumulative Project: Boss Machine -------------------- 
+    > npm i
+    > npm run start     // to begin your server, script will automatically restart your server whenever you make changes to the server.js file or server/ folder.
+    or > node server.js
+    open index.html 
+    // server.js
+        - set up express middlewares: body-parser, cors.
+        - mount the existing apiRouter at /api.
+        - start the server listening on the provided PORT.
+        - add routes - minions + work bonus, ideas with middleware, meetings - using f-ns from database
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
+
+12. SQL and Databases for Web Development
+    DB: 
+        - relational databases: MySQL, PostgreSQL 
+        - non-relational(NoSQL) databases: MongoDB, Redis.
+
+        SELECT * FROM browse LIMIT 10;
+            * means all columns.
+            LIMIT is a clause that lets you specify the maximum number of rows the result set will have.
+        SELECT column1, column2 FROM table_name;
+        SELECT name AS 'Titles' FROM movies;
+            AS - to rename a column or table using an alias. (the columns are not being renamed in the table. The aliases only appear in the result).
+        SELECT DISTINCT tools FROM inventory;
+            DISTINCT is used to return unique values in the output. It filters out all duplicate values in the specified column(s).
+        SELECT * FROM movies WHERE imdb_rating > 8;
+                WHERE clause filters the result set to only include rows where the following condition is true.
+            SELECT * FROM movies WHERE name LIKE 'Se_en';
+            SELECT * FROM movies WHERE name LIKE 'A%';
+                LIKE - to compare similar values. 
+                    - The _ means you can substitute any individual character here without breaking the pattern.
+                    - % is a wildcard character that matches zero or more missing letters in the pattern.
+            SELECT name FROM movies WHERE imdb_rating IS NOT NULL;  // IS NULL
+                It is not possible to test for NULL values with comparison operators, such as = and !=.
+            SELECT * FROM movies WHERE year BETWEEN 1990 AND 1999;
+            SELECT * FROM movies WHERE name BETWEEN 'A' AND 'J';
+                When the values are text, BETWEEN filters the result set for within the alphabetical range.
+            SELECT * FROM movies WHERE year BETWEEN 1990 AND 1999 AND genre = 'romance';
+                AND combines the two conditions.
+            SELECT * FROM movies WHERE year > 2014 OR genre = 'action';
+        SELECT * FROM movies ORDER BY name;
+        SELECT * FROM movies WHERE imdb_rating > 8 ORDER BY year DESC;
+            ORDER BY is a clause that indicates you want to sort the result set by a particular column.
+        SELECT name,
+            CASE
+                WHEN imdb_rating > 8 THEN 'Fantastic'
+                WHEN imdb_rating > 6 THEN 'Poorly Received'
+                ELSE 'Avoid at All Costs'
+            END
+        FROM movies;
+            CASE is SQL’s way of handling if-then logic.
+            
+    Common data types:
+        - INTEGER, a positive or negative whole number
+        - TEXT, a text string
+        - DATE, the date formatted as YYYY-MM-DD
+        - REAL, a decimal value
+
+    CREATE TABLE celebs (
+        id INTEGER, 
+        name TEXT, 
+        age INTEGER
+    );
+
+    INSERT INTO celebs (id, name, age)  VALUES (1, 'Justin Bieber', 22);
+    SELECT statements always return a new table called the result set.
+    
+    ALTER TABLE celebs ADD COLUMN twitter_handle TEXT;
+        The ALTER TABLE statement adds a new column to a table.
+        NULL represents missing or unknown data. Here, the rows that existed before the column was added have NULL (∅) values for twitter_handle.
+    
+    UPDATE celebs SET twitter_handle = '@taylorswift13' WHERE id = 4; 
+    DELETE FROM celebs WHERE twitter_handle IS NULL;
+
+    SQLite setup guide: https://www.codecademy.com/articles/what-is-sqlite
+        Try typing sqlite3 newdb.sqlite. If you’re presented with a sqlite> prompt, you’ve installed SQLite! 
+
+    Constraints that add information about how a column can be used are invoked after specifying the data type for a column. 
+        - PRIMARY KEY
+        - UNIQUE
+        - NOT NULL
+        - DEFAULT
+
+        CREATE TABLE celebs (
+            id INTEGER PRIMARY KEY, 
+            name TEXT UNIQUE,
+            date_of_birth TEXT NOT NULL,
+            date_of_death TEXT DEFAULT 'Not Applicable'
+        );
+
+    Data Analysts do the following:
+            - Writing basic queries
+            - Calculating aggregates
+            - Combining data from multiple tables
+            - Creating usage funnels
+            - Analyzing user churn
+            - Determining web traffic attribution
+        -> funnel - воронка, data analyst wants to determine what percent of users make it through each step of the funnel so that data analyst can recommend improvements to the website.
+        -> A churn rate is the percent of subscribers to a monthly service who have canceled. 
+            churn rate = cancellations / total subscribers
+        -> UTM Parameters are special tags that site owners add to their pages to track what website a user was on before they reach the website. 
+            e.g. utm_source = ‘google’.     // through Google search
+                 utm_source = ‘facebook’.   // user clicked a Facebook ad 
+
+    -------------------- SQL Calculations --------------------
+    Calculations performed on multiple rows of a table are called aggregates.
+    Aggregates:
+        COUNT(): count the number of rows
+        SUM(): the sum of the values in a column
+        MAX()/MIN(): the largest/smallest value
+        AVG(): the average of the values in a column
+        ROUND(): round the values in the column
+
+    GROUP BY is a clause in SQL that is used with aggregate functions.
+    HAVING is very similar to WHERE. We can’t use WHERE here because we don’t want to filter the rows; we want to filter groups.
+
+    SELECT COUNT(*) FROM table_name;
+    SELECT SUM(downloads) FROM fake_apps;
+    SELECT MAX(downloads) FROM fake_apps;
+    SELECT AVG(downloads) FROM fake_apps;
+    SELECT ROUND(price, 0) FROM fake_apps;
+    SELECT year, AVG(imdb_rating) FROM movies GROUP BY year ORDER BY year;
+    SELECT year, genre, COUNT(name) FROM movies GROUP BY 1, 2 HAVING COUNT(name) > 10;
+
+    -------------------- Multiple SQL Tables --------------------
+    One table:
+        order_id
+        customer_id
+        customer_name
+        customer_address
+        subscription_id
+        subscription_description
+        subscription_monthly_price
+        subscription_length
+        purchase_date
+    Should be 3 tables:
+        orders: order_id, customer_id, subscription_id, purchase_date
+        subscriptions: subscription_id, description, price_per_month, subscription_length
+        customers: customer_id, customer_name, address
+
+    Combining Tables with SQL (JOIN)
+    INNER JOIN
+        SELECT * FROM orders JOIN customers ON orders.customer_id = customers.customer_id;
+        SELECT orders.order_id, customers.customer_name FROM orders JOIN customers ON orders.customer_id = customers.customer_id;
+    A left join will keep all rows from the first table, regardless of whether there is a matching row in the second table.
+        SELECT * FROM table1 LEFT JOIN table2 ON table1.c2 = table2.c2;
+    When the primary key for one table appears in a different table, it is called a foreign key.
+    CROSS JOIN lets us combine all rows of one table with all rows of another table.
+        SELECT shirts.shirt_color, pants.pants_color FROM shirts CROSS JOIN pants;
+    UNION stacks one dataset on top of another. Rules for appending data:
+        - Tables must have the same number of columns.
+        - The columns must have the same data types in the same order as the first table.
+        SELECT * FROM table1 UNION SELECT * FROM table2;
+
+    WITH allows us to define one or more temporary tables that can be used in the final query.
+        WITH previous_results AS (SELECT ...    ...    ...    ... ) SELECT * FROM previous_results JOIN customers ON _____ = _____;
+
+    -------------------- Project: Gold Medal Metrics --------------------
+    > npm install 
+    > npm run webpack   // to compile the front-end files
+    > open index.html
+    > node server.js    // To start your server
+    Write a series of js f-ns that return the SQL queries in sql.js
+    > npm test
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
+
+13. Building a Persistent API
+    -------------------- Node-SQLite --------------------
+    Opening A Database:
+        const sqlite3 = require('sqlite3'); // import a module.  This code gives us a js object, called sqlite3 that we can interact with via methods.
+        const db = new sqlite3.Database('./db.sqlite'); // method that opens up a new database, path to the file that SQLite will use to save the database
+
+    To execute a query and retrieve all rows returned, we use db.all(), like so:
+        db.all("SELECT * FROM Dog WHERE breed='Corgi'", (error, rows) => {
+            printQueryResults(rows);
+        });
+
+    Retrieving A Single Row: 
+        With a tiny database, this might be OK:
+            db.all("SELECT * FROM Dog", (error, rows) => {
+                printQueryResults(rows.find(row => row.id === 1));
+            });
+        If the database is large(db.get() - will fetch a single row from a database):
+            db.get("SELECT * FROM Dog WHERE owner_name = 'Charlie'", (error, row) => {
+                printQueryResults(row); 
+            });
+
+    Using Placeholders:
+        const furLength1 = "short";
+        const furLength2 = "long";
+        const furColor1 = "brown";
+        const furColor2 = "grey";
+
+        const findDogByFur = (length, color) => {
+            db.all(
+                "SELECT * FROM Dog WHERE fur_length = $furLength AND fur_color = $furColor", 
+                {
+                    $furLength: length,
+                    $furColor: color
+                }, 
+                (error, rows) => {
+                    printQueryResults(rows);
+                }
+            );
+        });
+
+        findDogByFur(furLength1, furColor1); // prints all dogs with short brown fur.
+        findDogByFur(furLength2, furColor1); // prints all dogs with long brown fur.
+        findDogByFur(furLength1, furColor2); // prints all dogs with short grey fur.
+        findDogByFur(furLength2, furColor2); // prints all dogs with long grey fur
+    
+    Using db.run()
+    To perform SQL commands that do not return rows, we use db.run() to run the command.
+    The SQL syntax for inserting is:
+        INSERT INTO TableName (col_1_name, col_2_name, ...) VALUES (val_1, val2, ...);
+
+    Handling Errors Gracefully.
+
+    Using db.each():
+        db.each("SELECT * FROM Dog WHERE breed = 'Labrador'", 
+        (error, row) => {
+            console.log(`${row.name} is a good dog`);   // This gets called for every row our query returns
+        },
+        (error, numberOfRows) => {
+            console.log(`There were ${numberOfRows} good dogs`);    // This gets called after each of our rows have been processed
+        });
+
+    Creating A New Table
+        db.run('INSERT INTO Average (year, temperature) VALUES ($year, $temp)', 
+            {
+					$year: row.year,
+        	        $temp: row.temperature
+      	    }, err => {
+                if (err) {
+                    console.log(err);
+                }
+            });
+
+    Serial Queries
+    One way, write all code in nested callbacks:
+        db.run("DROP TABLE Dog", error => {
+            db.run("CREATE TABLE Dog", error => {
+                db.run("INSERT INTO Dog (breed, name, owner, fur_color, fur_length) VALUES ('Dachschund', 'Spike', 'Elizabeth', 'Brown', 'Short')", error => {}
+            }
+        }
+    Another way, using the db.serialize() method:
+        db.serialize(() => {                                                                                                                          
+            db.run("DROP TABLE Dog");   // 1. remove the table Dog if it exists.
+            db.run("CREATE TABLE Dog"); // 2. create an empty table named Dog.
+            db.run("INSERT INTO Dog (breed, name, owner, fur_color, fur_length) VALUES  ('Dachshund', 'Spike', 'Elizabeth', 'Brown', 'Short')");
+        });
+
+    -------------------- Persistent API Cumulative Projects --------------------
+    When we are building APIs, we want our models to provide four basic types of functionality:
+        - CRUD: Create, Read, Update, and Delete resources.
+    In a REST environment, CRUD often corresponds to the HTTP methods POST, GET, PUT, and DELETE, respectively. 
+        - To create resources in a REST environment- use the HTTP POST method. 
+            Request: POST http://www.myrestaurant.com/dishes/
+            Body -
+                {
+                    "dish": {
+                        "name": “Avocado Toast”,
+                        "price": 8
+                    }
+                }
+            Upon successful creation, the server should return a header with a link to the newly-created resource, 
+            along with a HTTP response code of 201 (CREATED).
+        - To read resources in a REST environment - use the GET method.
+            Request: GET http://www.myrestaurant.com/dishes/
+            Response: Status Code - 200 (OK)
+            Body -
+                {
+                    "dishes": [
+                        {
+                        "id": 1,
+                        "name": “Spring Rolls”,
+                        "price": 6
+                        },
+                        {
+                        "id": 2,
+                        "name": “Mozzarella Sticks”,
+                        "price": 7
+                        },
+                        ...
+                        {
+                        "id": 1223,
+                        "name": “Avocado Toast”,
+                        "price": 8
+                        },
+                        {
+                        "id": 1224,
+                        "name": “Muesli and Yogurt”,
+                        "price": 5
+                        }
+                    ]
+                }
+            GET requests can also be used to read a specific item, when its id is specified in the request:
+                Request: GET http://www.myrestaurant.com/dishes/1223
+                Response: Status Code - 200 (OK) Body -
+                {
+                    "id": 1223,
+                    "name": “Avocado Toast”,
+                    "price": 8
+                }
+        - PUT is the HTTP method used for the CRUD operation, Update.
+            Request: PUT http://www.myrestaurant.com/dishes/1223
+            Body -
+                {
+                    "dish": {
+                        "name": “Avocado Toast”,
+                        "price": 10
+                    }
+                }
+        - The CRUD operation Delete corresponds to the HTTP method DELETE. 
+            Request: DELETE http://www.myrestaurant.com/dishes/1223
+            Response: Status Code - 204 (NO CONTENT) 
+            Body - None
+
+    -------------------- Cumulative Project: Codestrips --------------------
+    Let’s build an API for Codestrips! Codestrips is a small application to allow users to create and save small one-pane comic strips.
+    > npm i express
+    > npm install body-parser   // body-parsing middleware to parse JSON bodies.
+    > node app.js   // start your server
+    app.js
+        const express = require('express')
+        const bodyParser = require('body-parser')
+
+        const app = express();  // Create a server
+        const PORT = process.env.PORT || 4001;
+        app.use(bodyParser.json());
+        app.use(express.static('public'));
+        app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+
+        module.exports = app;
+    > npm i sqlite3
+    > node sql.js   // Run the file to create an empty Strip table
+    > node seed.js  // After creating the database, you can add two test strips to the database
+    sql.js
+        const sqlite3 = require('sqlite3')
+        const db = new sqlite3.Database('./db.sqlite')
+
+        db.serialize(()=>{
+            db.run('DROP TABLE IF EXISTS Strip')
+            db.run(`CREATE TABLE IF NOT EXISTS Strip(
+                id INTEGER PRIMARY KEY,
+                head TEXT NOT NULL, 
+                body TEXT NOT NULL, 
+                background TEXT NOT NULL, 
+                bubble_type TEXT NOT NULL, 
+                bubble_text TEXT NOT NULL DEFAULT "", 
+                caption TEXT NOT NULL DEFAULT ""
+            )`)
+        })
+    app.js - add:
+        const sqlite3 = require('sqlite3')
+        const db = new sqlite3.Database(process.env.TEST_DATABASE || './db.sqlite');
+        app.get('/strips', (req, res, next) => {
+            db.all('SELECT * FROM Strip', (err, rows) => {
+                if (err) {
+                res.sendStatus(500);
+                } else {
+                res.send({strips: rows});
+                }
+            });
+        });
+
+        const validateStrip = (req, res, next) => {
+            const stripToCreate = req.body.strip;
+            // head, body, background, and bubbleType are required.
+            // Send a 400 status code if any of the required values are not present in the request.
+            if (!stripToCreate.head || !stripToCreate.body || !stripToCreate.bubbleType ||
+                !stripToCreate.background) {
+                return res.sendStatus(400);
+            }
+            next();
+        }
+
+        app.post('/strips', validateStrip, (req, res, next) => {
+            const stripToCreate = req.body.strip;
+            db.run(`INSERT INTO Strip (head, body, bubble_type, background, bubble_text,
+                caption) VALUES ($head, $body, $bubbleType, $background, $bubbleText,
+                $caption)`,
+            {
+                $head: stripToCreate.head,
+                $body: stripToCreate.body,
+                $bubbleType: stripToCreate.bubbleType,
+                $background: stripToCreate.background,
+                $bubbleText: stripToCreate.bubbleText,
+                $caption: stripToCreate.caption,
+            }, function(err) {
+                if (err) {
+                    return res.sendStatus(500);
+                }
+                db.get(`SELECT * FROM Strip WHERE id = ${this.lastID}`, (err, row) => {
+                    if (!row) {
+                        return res.sendStatus(500);
+                    }
+                    res.status(201).send({strip: row});
+                });
+            });
+        });
+        
+    seed.js
+        const sqlite3 = require('sqlite3');
+        const db = new sqlite3.Database('./db.sqlite');
+
+        db.serialize(() => {
+        db.run(`INSERT INTO Strip (head, body, background, bubble_type, bubble_text, caption)
+                VALUES ('happy', 'x', 'boat', 'statement', 'Beautiful day to sail to code island',
+                'A Great Day')`, (err) => {
+                    if (err) {
+                    throw err;
+                    }
+                });
+        db.run(`INSERT INTO Strip (head, body, background, bubble_type, bubble_text, caption)
+                VALUES ('angry', 'plus', 'space', 'sound', 'What do aliens on the metric system say?
+                Take me to your liter!', 'Cosmic Jokes')`, (err) => {
+                    if (err) {
+                    throw err;
+                    }
+                });
+        db.all('SELECT * FROM Strip', (err, rows) => {
+            if (err) {
+            throw err;
+            }
+            console.log(`Finished seeding. There are ${rows.length} rows into the Strip table.`);
+        });
+        });
+
+    -------------------- X-Press Publishing --------------------
+    Setup Project
+        > npm install
+    Setup Server
+        - create /server.js
+        - npm i body-parser cors errorhandler morgan express
+        - server.js
+            const express = require('express');
+            const bodyParser = require('body-parser')
+            const cors = require('cors')
+            const errorhandler = require('errorhandler')
+            const morgan = require('morgan')
+
+            const app = express()
+            const PORT = process.env.PORT || 4000
+            app.use(bodyParser.json())  // body-parser JSON middleware f-n for all routes in the server. 
+            app.use(cors()) // CORS middleware f-n for all routes in the server. 
+
+            // errorHandler middleware
+            app.use(function (err, req, res, next) {
+                console.error(err.stack)
+                res.status(500).send('Something broke!')
+                // res.status(500)
+                // res.render('error', { error: err })
+            })
+
+            app.listen(PORT, () => {
+                console.log('Listening on port: ' + PORT);
+            });
+            module.exports = app
+    Create API Router
+        - create /api/api.js
+            const express = require('express');
+            const apiRouter = express.Router()
+            Export the router
+        - server.js
+            const apiRouter = require('./api/api');
+            app.use('/api', apiRouter);
+    Create Artist Table - ?? [couldn't install sqlite3]
+        - migration.js
+            Import sqlite3
+        - database.sqlite
+            const db = new sqlite3.Database('./database.sqlite');
+            db.run('CREATE TABLE IF NOT EXISTS `Artist` ( ' +
+                '`id` INTEGER NOT NULL, ' +
+                '`name` TEXT NOT NULL, ' +
+                '`date_of_birth` TEXT NOT NULL, ' +
+                '`biography` TEXT NOT NULL, ' +
+                '`is_currently_employed` INTEGER NOT NULL DEFAULT 1, ' +
+                'PRIMARY KEY(`id`) )');
+            > node migration.js
+            > npm test
+    Create Artist Routes: CRUD
+        - create /api/artists.js
+            const express = require('express');
+            const artistsRouter = express.Router();
+            const sqlite3 = require('sqlite3')
+            const db = new sqlite3.Database(process.env.TEST_DATABASE || './database.sqlite')
+            module.exports = artistsRouter;
+        - /api/api.js
+            const artistsRouter = require('./artists.js');
+            - mount the artists router at /artists
+    - ...
+    Solution: https://www.youtube.com/watch?v=qri-Rr0m5Is&feature=emb_title
+
+    -------------------- Expresso --------------------
+    > npm i
+    > npm i express
+    > node server.js    // copy path of index.html and insert it in browser to view local version of the site 
+    > npm test
+
+    server.js
+        - install & import middlewares
+        - import api router 
+    migration.js
+        - import sqlite3, declare db, create tables schemas
+        > node migration.js
+    /api/api.js
+
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
+
+14. Test-Driven Development with JavaScript
+    Terms: manual testing, automated testing, test suite, bug, documentation, and regression.
+
+    Software testing: 
+        - Manual testing
+            > npm start
+            EXAMPLE. Manually test the web app by following the list provided:
+                Behavior 1: Run npm start in the terminal and reload the page. Scroll down and expect the webpage to start with a blank order.
+                Behavior 2: Type a name and click “Place Order”. Scroll down and expect “Deliver to:” to display the submitted name.
+                Behavior 3: A blank name will not overwrite the existing name.
+                Behavior 4: Select a cake type and place the order. Expect “Cake” to display the selected cake type.
+                Behavior 5: Check some fillings. Expect “Fillings” to display your selected fillings.
+                Behavior 6: Choose a stack size. Expect “Pancake Count:” to display the number equivalent to the stack size, e.g. “Double” is “2”.
+        - Automated Testing
+            > npm test
+            The workflow (of professional developers instead of testing team at the end of development) might look like this:
+                1. Write code and corresponding tests
+                2. Enter a command into a terminal to run tests
+                3. If the app behaves as intended, all tests should pass. Development is complete.
+                4. If it does not behave as intended, at least one test should fail. Fix code and return to step 2.
+            Example:
+                it('Orders can only be served on the hour, between 8:00 and 12:00', () => {
+                    const earlyHr = '7:00';
+                    const lateHr = '13:00';
+
+                    browser.url('/');
+                    const HTML = browser.getHTML('body');
+                    const parseHTML = parseTextFromHTML(HTML, '#select-pickUp');
+                    assert.notInclude(parseHTML, earlyHr);
+                    assert.notInclude(parseHTML, lateHr);
+                }); 
+    Code:  
+        - implementation code (code defining your app, e.g. written in index.js)  
+        - test code (code defining your tests, e.g. written in index-test.js)
+    Test suite - is a collection of tests for a web application. 
+    Documentation.
+    Regression.
+        When adding a new feature to your product, it’s possible that something will break. 
+        If that break occurs within a feature developed earlier, it is called regression. 
+        When functionality previously developed and tested stops working, you may say the functionality regressed.
+    
+    -------------------- Mocha framework & Node.js assert library in JS --------------------
+    https://mochajs.org/
+        > npm init
+        > npm install mocha -D  // -D notes that this package is a dependency for your project, which makes it easier for other developers to use
+    Run Mocha:
+        Way 1. 
+            > ./node_modules/mocha/bin/mocha
+        Way 2. (recommended) - add script to package.json.
+            "scripts": {
+                "test": "mocha"
+            }
+            > npm test
+    Group tests using 👉'describe' fn & Define tests using 👉'it' fn. 
+    Both the 'describe' and 'it' fns accept two parameters: a descriptive string and a callback function.
+    Example:
+        describe('Math', () => {
+            describe('.max', () => {
+                it('returns the argument with the highest value', () => {
+                    // Your test goes here
+                });
+                it('returns -Infinity when no arguments are provided', () => {
+                    // Your test goes here
+                });
+            });
+        });
+    
+    Methods from Node’s assert library:
+    - assert.equal()          performs a == comparison
+    - assert.ok() 
+    - assert.strictEqual()    performs a === comparison
+    - assert.deepEqual()      to compare arrays or the values within two objects using loose (==) equality.
+    - other methods: https://nodejs.org/api/assert.html
+
+    // As a Node module, assert can be imported at the top of your files.
+        const assert = require('assert');
+    // You call assert functions like this:
+        assert.ok(a === 3);     // if 'true', so no error is thrown. If 'false', an AssertionError is thrown.
+    
+    6 Characteristics of a good test: fast, complete, reliable, isolated, maintainable, and expressive. 
+    https://www.codecademy.com/articles/tdd-u2-good-test
+
+    // Naive approach
+    describe('.pop', () => {
+        it('returns the last element in the array [naive]', () => {
+            assert.ok(['padawan', 'knight'].pop() === 'knight'); 
+        });
+    });
+
+    // 3 phase approach (makes your test more reliable, maintainable, and expressive.)
+    describe('.pop', () => {
+        it('returns the last element in the array [3phase]', () => {
+            // 1. Setup
+            const knightString = 'knight';
+            const jediPath = ['padawan', knightString];
+
+            // 2. Exercise
+            const popped = jediPath.pop();
+
+            // 3. Verify
+            assert.ok(popped === knightString);
+
+            // 4. Teardown -(to make test isolated) reset any conditions that were changed during the test
+            // Some tests require a fourth phase called teardown. It's used to reset the environment before the next test runs.
+            // Some common changes to an environment include
+            //    - changing read and write permissions on a file
+            //    - altering files and directory structure
+            //    - editing records in a database
+
+        });
+    });
+
+    // 4 phase approach
+    const assert = require('assert');
+    const fs = require('fs');
+    describe('appendFileSync', () => {
+        it('writes a string to text file at given path name', () => {
+
+            // Setup
+            const path = './message.txt';
+            const str = 'Hello Node.js';
+            
+            // Exercise: write to file
+            fs.appendFileSync(path, str);
+
+            // Verify: compare file contents to string
+            // if you write 'readileSync' instead of 'readFileSync' --> you'll see TypeError
+            // It prevented the execution of the teardown phase! This means the message.txt file won’t be deleted --> so we'll use hooks.
+            const contents = fs.readFileSync(path);
+            assert.ok(contents.toString() === str);
+
+            // Teardown: delete path    // run the test suite twice and compare the outputs.
+            fs.unlinkSync(path)
+        });
+    });
+
+    A 👉hook is a piece of code that is executed when a certain event happens. Hooks can be used to set and 
+    reset conditions like the setup and teardown phases do. In Mocha, a hook is written within a describe block.
+    https://mochajs.org/#hooks
+
+    describe('example', () => {
+        afterEach(() => {
+            // teardown goes here
+        });
+
+        it('.sample', () => {
+            // test goes here
+        });
+    });
+    In this example the function passed to afterEach is called after each it block is executed.
+    The other hooks in the Mocha library are before(), beforeEach(), and after(). 
+
+    -------------------- TDD --------------------
+    Test-driven development (TDD) is a programming technique where you write test code before implementation code. 
+    One of the driving forces of TDD is the red-green-refactor cycle (-> after that - consider edge cases.)
+        Red signifies failing tests and green corresponds to passing tests.
+        Refactor — Clean up and optimize code following the characteristics of a good test. Refactoring involves actively considering test and implementation code and making revisions to the code base. 
+    At a high-level the process is:
+        Write The Test -> Fail The Test -> Pass The Test -> Refactor Your Code 
+
+    -------------------- The Testing Pyramid --------------------
+    Most full-stack web applications include the following layers:
+        - A view that appears in a user’s web browser
+        - A server that handles HTTP requests
+        - A database that stores information about user interactions
+    
+    1. (fast) Unit tests are isolated and fast tests that check one small behavior within your web application.
+        e.g. we want to test whether our database can save a comment. Saving does not involve the view or server. 
+    2. (slow) System tests are a group of fully integrated tests that exercise your entire web application.
+        e.g. we want to test whether our blog renders with the correct post and comments. 
+        This test exercises every layer of the web application:
+            - The database stores the blog post.
+            - The server sends the HTML to the browser.
+            - The browser renders the view.
+    3. (slower than system test but faster than unit tests) Integration tests include everything between unit tests and system tests. 
+        e.g. check whether your web application can save a server-generated comment to the database. 
+        This test integrates two layers of your web application:
+            - The server receives the comment and sends it to the database.
+            - The database stores your comment
+        Developers often call tests like the one above 👉end-to-end tests, because they start in the browser (one end) and traverse the stack to the database (other end).
+    
+    The number and types of unit and integration tests that you write can be mapped onto the 👉testing pyramid.
+    The testing pyramid is an approach to structuring your test suite.
+        Browser-level integration tests more expensive than server-level tests.
+        Server tests are more expensive than model tests.
+        Model and database are the cheapest.
+    
+    Example
+    Let’s consider the most efficient set of tests we could write to check that the browser renders only the last ten comments (under article on blog website).
+    To support a ten-comment limit, we added 
+        - one server test 
+            - Calling a Comments.latest method returns a list of comments from your database that is ten items or less.
+        - four model tests
+            - A database with more than ten comments returns only ten.
+            - A database with less than ten comments returns all of the comments.
+            - A database with zero comments returns zero comments.
+            - The list of comments is in reverse chronological order.
+
+    When making decisions about how to test a feature, you should ask yourself a few of these questions:
+        - Is a feature-level integration test necessary?
+        - Can I test the same behavior with server and model layer tests?
+        - How much confidence do I have with the server and model layer tests?
+        - How long does the feature test take? Will that impact my team’s workflow?
+    
+    -------------------- Outside-in TDD --------------------
+    Outside-in TDD is an approach that developers use to build full-stack web applications. 
+    It leverages the same red, green, refactor steps, but with one caveat — a failing test does not always 
+    inform you to write new implementation code. Instead, it may require that you implement new functionality 
+    at a different level.
+
+    Example: You have a movie blog and want to develop a feature that renders user comments under your blog posts. The application should render no more than ten comments when a user lands on the web page. The application should present the comments in reverse chronological order (i.e. the most recent comment should be first).
+    Feature Testing
+        Let’s use the following outside-in TDD approach:
+            - Write a test that checks for the presence of a comment under a blog post.
+            - The test fails, because your web application does not render comments.
+            - Because your web application generates HTML at the server layer, you drop to the server to address the error.
+            Although we could continue to write feature tests to check for the number of rendered comments, we know server tests are cheaper, so we can test those details when we drop a layer.
+    Server Testing
+        - Write a test that checks for the presence of a dynamically generated comment element in the server HTML.
+        - The test fails, so we add implementation for a server-generated comment.
+        - Once we’re in the green and consider refactoring, we want to write a test that calls a method at the model layer, let’s call it Comment.latest(). At the server layer, we’ll check if the method returns comments from the database.
+        - Because this method doesn’t exist, we must drop to the model/database layer.
+    Model and Database Testing
+        - Write a test that checks if the Comment.latest method returns ten comments when the database has eleven comments.
+        - Implement the Comment.latest method to return ten comments, so the test is green.
+        - Once you’ve considered refactoring, write a test that checks whether the method returns the last ten comments in reverse chronological order.
+        - Implement and refactor
+        - Write a test that checks if Comment.latest() returns an empty array when your database is empty.
+        - Implement and refactor
+        - Write a test that checks if Comment.latest returns the correct number and order of comments when your database has between zero and ten comments in it.
+        - Implement and refactor
+    Refactoring Your Test Suite
+        Consider the questions below when deciding how to refactor your suite:
+            - How much longer does it take to run my test suite with these new tests?
+            - Is the additional amount of time that your test suite takes to run acceptable?
+            - Is there overlap between any of my new tests?
+            - Is there overlap between my new tests and existing tests? 
+
+    -------------------- Feature Testing With TDD --------------------
+    Additional tools:
+        - Chai https://www.chaijs.com/  - extends the types of assertions 
+            const {assert} = require("chai")
+            .include method
+        - PhantomJS https://phantomjs.org/ - allows us to run an instance of a headless browser so you can run tests that mimic user interaction with a web application. 
+        - WebdriverI/O https://webdriver.io/docs/gettingstarted.html - provides the methods to interact with browser values programmatically.
+            global 'browser' variable -  gives us access to the browser
+            browser.url() to simulate a user visiting the home page of our application, which is the first behavior we want to test.
+            .getText method
+            .setValue method
+
+        Example:      
+            describe('User visits root', () => {
+                describe('without existing poems', () => {
+                    it('page starts blank', () => {
+                        browser.url('/');
+                        assert.equal(browser.getText('#poems'), '');    // to verify that the element with the ID poems is empty.
+                    });
+                });
+            });
+
+        > npm init
+        > npm i chai mocha webdriverio -D
+        > npm i express
+
+    -------------------- Server Testing with TDD --------------------
+    Server tests are commonly used to test API responses, but we also use server tests for any server response 
+    that our application relies on. This can include checking status codes and error messages.
+    
+    Technologies: 
+        - Chai
+        - jsdom
+            jsdom library allows us to select elements of the DOM and check relationships and content. 
+            'parseTextFromHTML' helper function
+        - SuperTest
+            fn 'request' is actually a reference to the SuperTest library
+
+    Async / Await:
+    const foo = async () => {
+        console.log(await someAsyncThing());
+        return true;
+    }
+    foo();
+
+    const request = require('supertest');
+    const app = require('../../app');
+    describe('the homepage', () => {
+        it('returns the correct content', async () => {
+            const response = await request(app).get('/').send();
+            console.log(response.text);
+        });
+    });
+
+    In general, it is up to the developer to make a judgement call on how in depth to write a test.
+
+    Status Codes:
+    assert.equal(response.status, 200);
+
+    Response Content:
+    “Happy Path” — expected use cases of our application
+        response.text = '<div><div id="my-name">My Name</div></div>';
+        assert.include(parseTextFromHTML(response.text, '#my-name'), "My Name"); //True
+    “Sad Path” — unexpected or invalid use of our application
+        assert.notInclude(parseTextFromHTML(response.text, '#my-name'), "Your Name"); //True
+
+    Templating library like 'Handlebars' to separate the HTML view from the JavaScript controller.
+    /views/profile.handlebars
+        <h1 id="welcome-message">Welcome {{ username }}!</h1>
+    /routes/profile.js
+        res.render('profile', {username})
+        // instead of res.send('<h1 id="welcome-message">Welcome ' + username + '!</h1>');
+
+    API Errors:
+    We need to make sure our server properly handles invalid passwords, form field errors, etc.
+
+
+    -------------------- Model Testing with TDD --------------------
+    Mongoose is a JavaScript library that provides methods to interact with a MongoDB database. 
+    Mongoose translates JavaScript objects (JSON) to BSON data in a MongoDB database, and vice versa.
+
+    Mongoose Schema:
+    const poemSchema = new mongoose.Schema({
+        title: String
+    })
+
+    Mongoose provides data types:
+        - string, 
+        - integer, 
+        - boolean,  
+        - array
+        - timestamp
+        - Object ID
+
+    Mongoose has several built-in validators https://mongoosejs.com/docs/validation.html:
+        - required: true
+        - required: 'Title is required!'
+
+    const Poem = mongoose.model('Poem', poemSchema);    // mongoose.model(modelName, schema)
+
+    Mongoose supports the creation of methods on both instances of documents and collections of documents:
+        .statics() adds static “class” methods to the model.
+        .methods() adds an instance method to documents.
+
+
+    Testing: Model layer 
+    Tools: Mocha test framework and the Chai assertion library.
+
+    Methods. Mongoose schemas support:
+        - static:   methods called by a model. They typically operate on a collection of documents (instances of the model).
+        - instance: methods called by an instance of a model. They typically operate on the document (model instance) itself.
+
+        
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
