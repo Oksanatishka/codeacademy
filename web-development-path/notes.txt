@@ -6,30 +6,1572 @@
 1. Learn HTML
     > Elements and Structure
         Project: Fashion Blog (Inspect html) https://s3.amazonaws.com/codecademy-content/courses/learn-html/elements-and-structure/fashion.html
+        
+        HTML Anatomy
+        The Body
+        HTML Structure
+        Headings
+        Divs
+        Attributes
+        Displaying Text
+        Styling Text
+        Line Breaks
+        Unordered Lists / Ordered Lists
+        Images, Image Alts
+        Videos
+
+        HTML DOCUMENT STANDARDS
+            The <html> tag
+            The Head
+            Page Titles
+            Linking to Other Web Pages
+            Opening Links in a New Window
+            Linking to Relative Page
+            Linking At Will
+            Linking to Same Page (anchor)
+            Whitespace and indentation // to visualize the relationship between elements
+            Comments
+            HTML Tags
+
     > Tables
         Project: Wine Festival Schedule https://s3.amazonaws.com/codecademy-content/courses/learn-html-tables/index.html
+
+        Create a Table
+        Table Rows
+        Table Data
+        Table Headings
+        Table Borders
+        Spanning Columns & Spanning Rows
+        Table Body
+        Table Head
+        Table Footer
+        Styling with CSS
+
     > Forms
         Project: Form a Story
+
+        Text Input
+        Adding a Label
+        Password Input
+        Number Input
+        Range Input
+        Checkbox Input
+        Radio Button Input
+        Dropdown list
+        Datalist Input
+        Textarea element
+        Submit Form
+
+        FORM VALIDATION
+            - server-side validation
+            - client-side validation 
+                Requiring an Input  // required attribute
+                Set a Minimum and Maximum   // min, max attributes
+                Checking Text Length    // minlength, maxlength attributes
+                Matching a Pattern  // use pattern attribute and assign it regex
+
     > Learn Semantic HTML
         Project: New York City Blog
 
+        When building web pages, we use a combination of non-semantic HTML and Semantic HTML. 
+        The word semantic means “relating to meaning,” so semantic elements provide information about the content between the opening and closing tags.
+        Elements such as <div> and <span> are not semantic elements since they provide no context as to what is inside of those tags.
+        Why use Semantic HTML?  - Accessibility, SEO, Easy to Understand.
+        <header>, <nav> , <main> and <footer> create the basic structure of the webpage.
+
+        SEMANTIC HTML   // modern standard
+            - Header and Nav: <header>, <nav>
+                <header> 
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>      
+                        </ul>
+                    </nav>
+                </header>
+            - Main and Footer: <main>, <footer>
+                <main>
+                    <header><h1>Types of Sports</h1></header>
+                    <article><h3>Baseball</h3><p>The first game of baseball was played in Cooperstown, New York in the summer of 1839.</p></article>
+                </main>
+                The footer contains information such as:
+                    - Contact information
+                    - Copyright information
+                    - Terms of use
+                    - Site Map
+                    - Reference to top of page links
+            - Article and Section: <section>, <article>
+                <article> can hold content such as articles, blogs, comments, magazines, etc. 
+            - The Aside Element: <aside>
+                Some common uses of the <aside> element are for:
+                    - Bibliographies
+                    - Endnotes
+                    - Comments
+                    - Pull quotes
+                    - Editorial sidebars
+                    - Additional information
+            - Figure and Figcaption: <figure>, <figcaption>
+                <figure> is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+                <figcaption> is an element used to describe the media in the <figure> tag.
+                    <figure>
+                        <img src="overwatch.jpg"/>
+                        <figcaption>This picture shows characters from Overwatch.</figcaption>
+                    </figure>
+            - Audio and Attributes
+            - Video and Embed
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 2. Styling a Website
     > Selectors and Visual Rules
         Project: Healthy Recipes
         Project: Olivia Woodruff Portfolio
-    > Intro to Local Website Development
 
+        CSS SETUP AND SELECTORS
+            Inline Styles
+            The <style> Tag
+            The .css file
+            Linking the CSS File
+            Tag Name, Class Name, Multiple Classes, ID Name, Classes and IDs
+            Specificity  
+                It's the order by which the browser decides which CSS styles will be displayed.
+                IDs -> classes -> tags.
+            Chaining Selectors
+            Nested Elements
+            Important   // it’s best to avoid !important -> reorganize CSS
+            Multiple Selectors
+        
+        CSS VISUAL RULES
+            CSS Structure
+            Font Family
+            Font Size
+            Font Weight
+            Text Align
+            Color
+            Opacity
+            Background Image
+
+    > Local Website Development
+        setup with text editors: Visual Studio Code / Atom
+            we recommend naming directory 'projects' to store all of your coding projects.
+            debugging https://code.visualstudio.com/docs/editor/debugging
+        Chrome Devtools to inspect HTML and CSS in websites
+        
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 3. Getting Started with JavaScript
+    Console
+    Comments
+    Data Types (7):
+        primitive - Number, String, Boolean, Null, Undefined, Symbol, 
+        more complex - Object.
+    Arithmetic Operators: + - * / %
+    String Concatenation (using +)
+    Properties
+    Methods
+        syntax: 'example string'.methodName()
+    Built-in Objects
+        e.g. Math.floor((Math.random() * 50);    // To generate a random number between 0 and 50, we could multiply this result by 50
+
+    Variables: var, let, const
+        const variable cannot be reassigned because it is constant. If you try to reassign a const variable, you’ll get a TypeError.
+        Constant variables must be assigned a value when declared. If you try to declare a const variable without a value, you’ll get a SyntaxError.
+        
+        Mathematical Assignment Operators    
+        The Increment and Decrement Operator
+        String Interpolation    //  to insert, or interpolate, variables into strings using template literals. 
+        typeof operator
+    
+    JS Versions: ES6 and Before
+
+    Conditional Statements
+        - if, else if, and else statements
+        - comparison operators: <, >, <=, >=, ===, !==
+        - logical operators: &&, ||, !, 
+        - truthy vs falsy values, Truthy and Falsy Assignment
+            falsy values: 
+                - 0
+                - Empty strings like "" or ''
+                - null 
+                - undefined 
+                - NaN
+        - ternary operators
+        - switch statement
+
+    Functions
+        Function Declarations: function funcName() {}
+            hoisting    // allows access to function declarations before they’re defined. It isn’t considered good practice
+        Calling a Function  // The code inside a function body runs, or executes, only when the function is called. 
+        Parameters and Arguments
+            function funcName(parameters) {}
+            funcName(arguments);
+        Default Parameters
+        Return  // By default that resulting value is undefined. To pass back information from the function call, we use a return statement. 
+        Helper Functions
+        Function Expressions: const calculate = function() {}   // anonymous function, the function name is usually omitted
+        Arrow Functions: const calculate = () => {}
+        Concise Body Arrow Functions
+            JavaScript also provides several ways to refactor arrow function syntax.
+            - zero parameter: e.g. const calculate = () => {}
+                one parameter: e.g. const calculate = param1 => {}
+                two or more parameters: e.g. const calculate = (param1, param2) => {}
+            - implicit return
+                single-line block, e.g. const sum = num => num + num;
+                multi-line block, e.g. const sum = num => {const sum = num + num; return sum; };
+        
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 4. Getting More Advanced with Design
+    Box Model components:
+        - content container with width & height (dimensions of an element’s box)
+        - paddings
+        - borders
+        - margins
+            div {margin: 0 auto;}   // to center content, also add 'width'.
+
+        Total dimensions = sum of vertical dimensions X sum of horizontal dimensions.
+
+        Resetting Defaults:
+        All major web browsers have a default stylesheet they use in the absence of an external stylesheet. 
+        These default stylesheets are known as 'user agent' stylesheets. 
+        Many developers choose to reset these default values:
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+        CSS properties:
+            - min-width / max-width
+            - overflow: hidden / scroll / visible
+            - visibility: hidden / visible    // It will still leave an empty space where the element is intended to display.
+    
+    CHANGING THE BOX MODEL      
+        Default
+            box-sizing: content-box;        // the default box model, box dimensions are affected by border thickness and padding.
+        To reset the entire box model:
+            * {
+                box-sizing: border-box;     // to avoid the dimensional issues that exist in the default box model (means the overall dimensions of the box do not change).
+            }
+        
+        DevTools: Elements -> 'Computed' tab on the top of the rightmost column. 
+
+    CSS Display and Positioning
+        CSS properties:
+            - position: static(default) / relative / absolute / fixed
+                relative    // offset properties: top / bottom / left / right
+                absolute    // all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element.
+                fixed       // This technique is often used for navigation bars on a web page. The element is removed from the flow of the html document.
+            - display: inline / block / inline-block
+            - z-index
+            - float: left / right
+            - clear: left / right / both / none     // when multiple floated elements have different heights, it can affect their layout on the page. 
+
+    CSS COLOR
+        - Named colors (147)
+        - hex colors: e.g. #A0522D
+        - RGB (256 * 256 * 256 = 16,777,216) + opacity
+        - HSL   + opacity
+
+        Foreground color - is the color that an element appears in. 
+        Background color - e.g. when a heading is styled so that its background appears yellow.
+
+        CSS properties:
+            - color
+            - background-color
+        opacity
+    
+    CSS TYPOGRAPHY
+        Font Family (or typeface)
+            The default typeface for many browsers is Times New Roman. 
+            It’s a good practice to limit the number of typefaces used on a web page to 2 or 3.
+        Fallback Fonts: Serif / Sans-Serif
+            e.g. font-family: "Garamond", "Times", serif;
+        Linking Non-user fonts, e.g.Google Fonts, https://www.fontsquirrel.com/
+            <link href="https://fonts.googleapis.com/css?family=Droid+Serif" type="text/css" rel="stylesheet">
+            @font-face
+                @font-face {
+                    font-family: "Roboto";
+                    src: url(fonts/Roboto.woff2) format('woff2'),
+                        url(fonts/Roboto.woff) format('woff'),
+                        url(fonts/Roboto.tff) format('truetype');
+                }
+        CSS properties:
+            - font-family
+                font-family: Garamond;
+                font-family: "Courier New";             // When the name of a typeface consists of more than one word, it must be enclosed in double quotes (otherwise it will not be recognized)
+            - font-weight: normal / bold / 100-900      // 400 is the default font-weight of most text.
+            - font-style: normal / italic
+            - word-spacing  // The default amount of space between words is usually 0.25em.
+            - letter-spacing
+            - text-transform: uppercase / lowercase
+            - text-align: right / left / center
+            - line-height
+
+        Responsive Design
+            - hard coded measurements: px
+            - relative measurements: 
+                - em  // represents the size of the base font being used.
+                    16 pixels is normally the default size of text in a browser.
+                    if the base font is 16 pixels, then 1 em is equal to 16 pixels. 2 ems would equal 32 pixels, and so on.
+
+                    .splash-section {font-size: 18px;}
+                    .splash-section h1 {font-size: 1.5em;}
+
+                - rem (root em) // It acts similar to em, but instead of checking parent elements to size font, it checks the root element. The root element is the <html> tag.
+                    Most browsers set the font size of <html> to 16 pixels, so by default rem measurements will be compared to that value. 
+                    One advantage of using rems is that all elements are compared to the same font size value, making it easy to predict how large or small font will appear.
+                    
+                    If you are interested in sizing elements consistently across an entire website, the rem measurement is the best unit for the job. 
+                    If you’re interested in sizing elements in comparison to other elements nearby, then the em unit would be better suited for the job.
+                    
+                    html {font-size: 20px;}
+                    h1 {font-size: 2rem;}
+                
+                - percentages   // To size non-text HTML elements relative to their parent elements on the page you can use percentages.
+                    Percentages are often used to size box-model values, like width and height, padding, border, and margins. 
+                    They can also be used to set positioning properties (top, bottom, left, right).
+
+                    .main {height: 300px; width: 500px;}
+                    .main .subsection {height: 50%; width: 50%;}
+
+                Keep in mind: min-width / max-width, min-height / max-height
+                Scaling Background Images
+                    body {
+                        background-image: url('#');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+            MEDIA QUERIES
+                Dots Per Inch (DPI)
+                    screen resolution
+                    Many times we will want to supply higher quality media (images, video, etc.) only to users with screens that can support high resolution media.
+                    Targeting screen resolution also helps users avoid downloading high resolution (large file size) images that their screen may not be able to properly display.
+                    
+                    To target by resolution, we can use the min-resolution and max-resolution media features. 
+                    These media features accept a resolution value in either dots per inch (dpi) or dots per centimeter (dpc).
+                        @media only screen and (min-resolution: 300dpi) {
+                            /* CSS for high resolution screens */
+                        }
+                
+                Breakpoints
+                    The points at which media queries are set are called breakpoints.
+                    - tablets in landscape orientation:
+                        @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+                            /* CSS ruleset */
+                        }
+                    Rather than set breakpoints based on specific devices, the best practice is to resize your browser to 
+                    view where the website naturally breaks based on its content. 
+                    The dimensions at which the layout breaks or looks odd become your media query breakpoints.
+                    
+                    List of breakpoints by device widths:
+                        desktop > 1600px
+                        laptop <=1600px
+                        tablet landscape <=1024px
+                        tablet <=768px
+                        mobile <=480px
+
+        Flexbox     // a new tool developed for CSS3 that greatly simplifies how to position elements.
+            While flexbox is not meant to lay out entire pages, it is useful for positioning elements, whether individually or in groups.
+            There are two important components to a flexbox layout: 
+                - flex containers   // element that contains flex items. All direct child elements of a flex container are flex items.
+                    display: flex (block level element) / inline-flex (inline elements)
+                - flex items:
+                    justify-content: flex-start / flex-end / center / space-around / space-between  // To position the items from left to right
+                    align-items: flex-start / flex-end / center / baseline / stretch // To align flex items vertically
+                    
+                    flex-grow
+                    flex-shrink
+                    flex-basis
+                    flex
+                    flex-wrap
+                    align-content
+                    flex-direction
+                    flex-flow
+
+        Design Spec, example: https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-tea-cozy-redline.jpg
+            Provide a design spec and image assets.
+            A design spec is an image of a web page outlined with all of its CSS properties and values. These are usually created by a designer as a source of instructions for a web developer.
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 5. JavaScript: Arrays, Loops, and Objects
-    > Re-creating the Lodash Library
+    Scope
+        A block is the code found inside a set of curly braces {}. 
+        We say that variable has block scope because it is only accessible to the lines of code within that block. Variables that are declared with block scope are known as local variables because they are only available to the code that is part of the same block.
+        In global scope, variables are declared outside of blocks. These variables are called global variables.
+            When you declare global variables, they go to the global namespace. 
+        Scope pollution is when we have too many global variables that exist in the global namespace, or when we reuse variables across different scopes. 
+
+    Arrays
+        To create array:
+            - array literal     []
+            - 
+        To access element:
+            - using index
+        To update element.
+        Length: 
+            - .length property
+        Methods:
+            - .push() - .pop()
+            - .unshift() - .shift()
+            - .join(), .slice(), .splice(), and .concat()
+        
+        Variables declared with let can be reassigned.
+        Elements in an array declared with const remain mutable. Meaning that we can change the contents of a const array, but cannot reassign a new array or a different value.
+
+        When an array contains another array it is known as a nested array. 
+            To access the nested arrays: 
+                - bracket notation with the index value, e.g. nestedArr[1] or nestedArr[1][0]
+    
+    Loops
+        iterate simply means “to repeat”.
+        - for
+        - while
+        - do..while
+        
+        nested loop
+        break;
+    
+    HOF (HIGHER-ORDER FUNCTIONS)
+        Higher-order functions are functions that accept other functions as arguments and/or return functions as output. This enables us to build abstractions on other abstractions, just like “We hosted a birthday party” is an abstraction that may build on the abstraction “We made a cake.”
+        HOF is a function that either accepts functions as parameters, returns a function, or both!
+
+        Functions as Data
+            // we have an annoyingly long function name
+            const announceThatIAmDoingImportantWork = () => {
+                console.log("I’m doing very important work!");
+            };
+            // rename this function, re-assign the function to a variable with a suitably short name
+            const busy = announceThatIAmDoingImportantWork;     //  !! without parentheses
+            busy();
+
+            busy is a variable that holds a reference to our original function. If we could look up the address in memory of busy and the address in memory of announceThatIAmDoingImportantWork they would point to the same place. 
+            Our new busy() function can be invoked with parentheses as if that was the name we originally gave our function.
+            Notice how we assign announceThatIAmDoingImportantWork without parentheses as the value to the busy variable. We want to assign the value of the function itself, not the value it returns when invoked.
+
+        Functions as Parameters
+            We call the functions that get passed in as parameters and invoked callback functions because they get called during the execution of the higher-order function.
+            When we pass a function in as an argument to another function, we don’t invoke it. Anonymous functions can be arguments too!
+
+                const timeFuncRuntime = funcParameter => {      // takes in a function as an argument
+                   let t1 = Date.now();                         // saves a starting time
+                   funcParameter();                             // invokes the callback function
+                   let t2 = Date.now();                         // records the time after the function was called
+                   return t2 - t1;                              // returns the time the function took to run by subtracting the starting time from the ending time.
+                }
+                const addOneToOne = () => 1 + 1;
+                timeFuncRuntime(addOneToOne);       // timeFuncRuntime() is HOF
+            
+    Iterators
+        The built-in JavaScript array methods that help us iterate are called iteration methods, at times referred to as iterators.
+        Iterators are methods called on arrays to manipulate elements and return values.
+            .forEach()      // loops through the array and executes the callback function for each element.
+                                The return value for .forEach() will always be undefined.
+            .map()          // it takes an argument of a callback function and returns a new array
+            .filter()       // returns a new array, the callback function for the .filter() method should return true or false depending on the element that is passed to it. 
+
+            .findIndex()    // return the index of the first element that evaluates to true in the callback function.
+            .reduce()       // returns a single value after iterating through the elements of an array, thereby reducing the array.
+                arr.reduce((accumulator, currentValue) => {return accumulator + currentValue})
+            .some()         // return a boolean value
+            .every()        // return a boolean value
+        
+        Linting - a process by which text is evaluated and improved by an application.
+        Other methods: .split(' ')
+
+    Objects
+        object literal {}, data is organized into key-value pairs.
+        A key’s value can be of any data type in the language including functions or other objects.
+        To access an object’s property: 
+            - dot notation. 
+            - Bracket Notation: ['A', 'B', 'C'][0]; // Returns 'A'. We *must* use bracket notation when accessing keys that have numbers, spaces, or special characters in them. 
+        Methods:
+            - 'Math' is also a global javascript object and '.floor()' is a method on it.
+            - 'console' is a global javascript object and '.log()' is a method on that object. 
+        Nested Objects.
+        Looping Through Objects: for...in
+    
+    Advanced Objects:
+        > 'this' keyword.
+                const robot = {
+                    model: '1E78V2',
+                    provideInfo(){
+                        return `I am ${this.model}.`    // 'this.model' is the same as 'robot.model'
+                    },
+                    // this & issue with arrow fn:
+                    diet: () => {
+                        console.log(this.model);    // robot.diet(); will print undefined
+                        // Arrow functions inherently bind, or tie, an already defined this value to the function itself that is NOT the calling object. In the code snippet above, the value of this is the global object, or an object that exists in the global scope, which doesn’t have a dietType property and therefore returns undefined.
+                        // !! Avoid using arrow functions when using 'this' in a method!
+                    }
+                };
+        > conveying privacy in JavaScript methods.
+            Certain languages have privacy built-in for objects, but JavaScript does not have this feature. 
+            Rather, JavaScript developers follow naming conventions that signal to other developers how to interact with a property. 
+            One common convention is to place an underscore _ before the name of a property to mean that the property should not be altered. 
+                const bankAccount = {
+                    _amount: 1000       // _amount is not intended to be directly manipulated.
+                }
+                bankAccount._amount = 1000000;  // Even so, it is still possible to reassign _amount.
+            In later exercises, we’ll cover the use of methods called getters and setters. Both methods are used to respect the intention of properties prepended, or began, with _. 
+        > defining getters and setters in objects.
+            Getters are methods that get and return the internal properties of an object.
+            Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error. One workaround is to add an underscore before the property name like we did in the example above.
+
+                const person = {
+                    _firstName: 'John',
+                    _lastName: 'Doe',
+                    get fullName() {
+                        if (this._firstName && this._lastName){
+                          return `${this._firstName} ${this._lastName}`;
+                        } else {
+                          return 'Missing a first name or a last name.';
+                        }
+                    }
+                }
+                person.fullName; // 'John Doe'  // To call the getter method (!!without ()): 
+
+            Setter methods reassign values of existing properties within an object.
+                const person = {
+                    _age: 37,
+                    set age(newAge){
+                        if (typeof newAge === 'number'){
+                            this._age = newAge;
+                        } else {
+                            console.log('You must assign a number to age');
+                        }
+                    }
+                };
+                person.age = 100
+            Like getter methods, there are similar advantages to using setter methods that include checking input, performing actions on properties, and displaying a clear intention for how the object is supposed to be used. 
+            Nonetheless, even with a setter method, it is still possible to directly reassign properties. 
+                person._age = 'forty-five'
+                console.log(person._age); // Prints forty-five
+
+        > creating factory functions.
+            When we want to create many instances of an object quickly -> factory functions.
+            A factory function is a function that returns an object and can be reused to make multiple object instances. Factory functions can also have parameters allowing us to customize the object that gets returned.
+            e.g. With 'monsterFactory' in place, we don’t have to create an object literal every time we need a new monster. Instead, we can invoke the monsterFactory function with the necessary arguments to make a monster for us!
+
+                const monsterFactory = (name, age, energySource, catchPhrase) => {
+                    return { 
+                        name: name,
+                        age: age, 
+                        energySource: energySource,
+                        scare() {
+                            console.log(catchPhrase);
+                        } 
+                    }
+                };
+                const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
+                ghost.scare(); // 'BOO!'
+
+        > using destructuring techniques.
+            ES6 introduced some new shortcuts for assigning properties to variables known as destructuring.
+            Destructuring techniques:
+                - property value shorthand:
+                    const monsterFactory = (name, age) => {
+                        return { 
+                            name,
+                            age 
+                        }
+                    };
+                
+                - destructured assignment:
+                    const vampire = {
+                        residence: 'Transylvania',
+                        preferences: {
+                            day: 'stay inside'
+                        }
+                    };
+                    const residence = vampire.residence; 
+                    console.log(residence); // Prints 'Transylvania' 
+
+                    // Instead:
+                    const { residence } = vampire; 
+                    console.log(residence); // Prints 'Transylvania'
+
+                    const { day } = vampire.preferences;    // We can even use destructured assignment to grab nested properties of an object.
+                    console.log(day); // Prints 'stay inside'
+
+        Built-in Object Methods: .hasOwnProperty(), .valueOf(), ...
+            Object class methods: Object.assign(), Object.entries(), and Object.keys()
+
+    Re-creating the Lodash Library
         Project: Lodash
             Library documentation: https://lodash.com/docs/4.17.15
-
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 6. Building Interactive JavaScript Websites
+    The HTML parser does NOT process the next element in the HTML file until it loads and executes the <script> element, thus leading to a delay in load time and resulting in a poor user experience.
+    Additionally, scripts are loaded sequentially, so if one script depends on another script, they should be placed in that very order inside the HTML file.
+    HTML4 introduced the 'defer' and 'async' attributes of the <script> element to address the user wait-time in the website based on different scenarios.
+    
+    - defer attribute - specifies scripts should be executed after the HTML file is completely parsed.
+        When the HTML parser encounters a <script> element with the defer attribute, it loads the script but defers the actual execution of the JavaScript until after it finishes parsing the rest of the elements in the HTML file.
+        <script src="example.js" defer></script> 
+        When is defer useful?   - When a script contains functionality that requires interaction with the DOM, the defer attribute is the way to go. This way, it ensures that the entire HTML file has been parsed before the script is executed.
+    - async attribute - loads and executes the script asynchronously with the rest of the webpage. This means that, similar to the defer attribute, the HTML parser will continue parsing the rest of the HTML as the script is downloaded in the background. However, with the async attribute, the script will not wait until the entire page is parsed: it will execute immediately after it has been downloaded. 
+        <script src="example.js" async></script>
+        When is it useful? - async is useful for scripts that are independent of other scripts in order to function accordingly. Thus, if it does not matter exactly at which point the script file is executed, asynchronous loading is the most suitable option as it optimizes web page load time.    
+    - The old convention was to put scripts right before the </body> tag to prevent the script from blocking the rest of the HTML content. Now, the convention is to put the script tag in the <head> element and to use the defer and async attributes.
+
+    DOM
+        The Document Object Model, abbreviated DOM, is a powerful tree-like structure that allows programmers to conceptualize hierarchy and access the elements on a web page.
+        The DOM is a logical tree-like Model that organizes a web page’s HTML Document as an Object.
+        In the DOM tree, the top-most node is called the root node, and it represents the HTML document. The descendants of the root node are the HTML tags in the document, starting with the <html> tag followed by the <head> and <body> tags and so on.
+            A parent node is the closest connected node to another node in the direction towards the root.
+            A child node is the closest connected node to another node in the direction away from the root.
+                document    // root node
+                    |
+                   html
+                  |     |
+                head    body
+            
+            There are nine different types of node objects in the DOM tree. In our diagram, the node objects with the sharp-edge rectangles are of the type 'Element', while the rounded edge rectangles are of type 'Text', because they represent the text inside the HTML paragraph elements.
+            When trying to modify a web page, the script will mostly interact with the DOM nodes of type 'element'.
+            DOM allows us to access a node’s attributes, such as its class, id, and inline style.
+            
+            The 'document' object in JavaScript is the door to the DOM structure. 
+                - document.body
+                - document.title
+                - document.head
+                - other https://developer.mozilla.org/en-US/docs/Web/API/Document
+
+                You can access and set the contents of an element with the .innerHTML property.
+                    document.body.innerHTML = 'The cat loves the dog.';
+                    document.body.innerHTML = '<h2>This is a heading</h2>';
+
+            The DOM interface allows us to access a specific element with CSS selectors.
+                document.querySelector('p');    // The .querySelector() method allows us to specify a CSS selector and then returns the first element that matches that selector. 
+                document.getElementById('bio').innerHTML = 'The description';
+            
+            Style:
+                let blueElement = document.querySelector('.blue');
+                blueElement.style.backgroundColor = 'blue';
+
+                document.querySelector('.blue').style.fontFamily = 'Roboto';
+
+            Create and Insert Elements
+                let paragraph = document.createElement('p');
+                paragraph.id = 'info'; 
+                paragraph.innerHTML = 'The text inside the paragraph';
+                document.body.appendChild(paragraph);
+
+                Unlike the .innerHTML property, the .appendChild() method does not replace the content inside of the parent, in this case body. Rather, it appends the element as the last child of that parent.
+
+            Remove an Element
+                let paragraph = document.querySelector('p');    // to remove
+                document.body.removeChild(paragraph);
+
+                document.getElementById('sign').hidden = true;  // to hide 
+
+            Interactivity with onclick
+                let element = document.getElementById('interact');
+                element.onclick = function() { element.style.backgroundColor = 'blue' };
+
+        DOM EVENTS WITH JAVASCRIPT
+            After a specific event fires on a specific element in the document object model (or DOM), an 'event handler function' can be created to run as a response. 
+            JavaScript interprets registered events as event objects with properties and methods. 
+
+            It’s best practice to create named event handler functions, instead of anonymous functions. 
+                let eventHandlerFunction = function() {// this block of code will run}
+                eventTarget.onclick = eventHandlerFunction;
+            
+            The .addEventListener() method is another common syntax for registering event handlers. 
+                eventTarget.addEventListener('click', eventHandlerFunction);
+
+            The .removeEventListener() method is used to reverse the .addEventListener() method. 
+                eventTarget.removeEventListener('click', eventHandlerFunction);
+            
+            Event Object Properties
+                .target property to access the element that triggered the event.
+                .type property to access the name of the event.
+                .timeStamp property to access the number of milliseconds that passed since the document loaded and the event was triggered.
+
+                let sharePhoto = function(event) {
+                  event.target.style.display = 'none';
+                  text.innerHTML = 'You share the puppy in ' + event.timeStamp + ' ms.';
+                }
+                share.onclick = sharePhoto;
+
+            Event Types https://developer.mozilla.org/en-US/docs/Web/Events
+                - 
+                - mouse events
+                - keyboard
+
+        HANDLEBARS
+            Handlebars.js   - is an external library used to create templates which are a mix of HTML, text, and expressions.
+            
+            Invitations are a great example of a “real life” template.
+            Inside a script, Handlebar expressions are wrapped with double braces, {{someVariable}}.
+                Steps:
+                    - Add the Handlebars library to your project.
+                    - Create a Handlebars script in your HTML file.
+                    - In your JavaScript file, grab the HTML stored in the Handlebars script.
+                    - Use Handlebars.compile() to return a templating function.
+                    - Pass in a context object to the templating function to get a compiled template.
+                    - Render the compiled template onto the web page.
+                
+            Handlebars expressions.
+                //index.html
+                <head>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+                    <script id="ice-cream" type="text/x-handlebars-template">   // used to deliver a template to the browser.
+                        <h2>Why {{flavor}} is the best</h2>
+                        <p>It is without a doubt that {{flavor}} is the best ice cream flavor in the world.</p>
+                    </script>
+                </head>
+                <body>
+                    <div id="scream"></div>
+                    <script src="main.js" type="text/javascript"></script>
+                </body>
+
+                // main.js
+                const source = document.getElementById('ice-cream').innerHTML;
+                const template = Handlebars.compile(source);
+                const context = {
+                    flavor: 'vanilla'
+                };
+                const compiledHtml = template(context);
+                const iceCreamText = document.getElementById('scream');
+                iceCreamText.innerHTML = compiledHtml;
+
+            Handlebars "If" block helper & Handlebars "Else" section
+                {{#if argument}}        // opening {{#if}} expression
+                    // Code to include if the provided argument is truthy 
+                {{else}}
+                    // Code to include if the provided argument is falsy 
+                {{/if}}                 // closing {{/if}} expression
+
+            Handlebars "Each" and "This"        // allows you to iterate through an array
+                {{#each someArray}}
+                    <p>{{this}} is the current element!</p>     // {{this}} acts as a placeholder for the element in the iteration.
+                {{/each}}
+                
+                This {{each}} block would be paired with an array like:
+                    const context = {
+                        someArray: ['First', 'Second', 'Third'] 
+                    }
+                    or  (but then {{this}} should be {{this.shape}})
+                    const context = {
+                        someArray: [
+                            {shape: 'Triangle'},
+                            {shape: 'Circle'},
+                            {shape: 'Square'}
+                        ] 
+                    }
+
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 7. Intermediate JavaScript
+    CLASSES
+        // See halley object 
+        let halley = {
+            _name: 'Halley',
+            _behavior: 0,
+
+            get name() {
+                return this._name;
+            },
+
+            get behavior() {
+                return this._behavior;
+            },
+
+            incrementBehavior() {
+                this._behavior++;
+            }
+        }
+        
+        // See Class
+        class Dog {
+            constructor(name) {
+                this._name = name;
+                this._behavior = 0;
+            }
+            
+            get name() {
+                return this._name;
+            }
+            get behavior() {
+                return this._behavior;
+            }   
+            
+            incrementBehavior() {
+                this._behavior ++;
+            }
+        }
+        const halley = new Dog('Halley');   // class instantiation
+        console.log(halley.name); 
+        console.log(halley.behavior); 
+        halley.incrementBehavior();         // method call
+        console.log(halley.behavior); 
+
+        JavaScript calls the constructor() method every time it creates a new instance of a class.
+        In the context of a class, this refers to an instance of that class.
+        Class method and getter syntax is the same as it is for objects except you can not include commas between methods.
+        Notice, we also prepended our property names with underscores (_name and _behavior), which indicate these properties should not be accessed directly. 
+
+        Inheritance
+            When multiple classes share properties or methods, they become candidates for inheritance.
+            With inheritance, you can create a parent class (also known as a superclass) with properties and methods that multiple child classes (also known as subclasses) share. The child classes inherit the properties and methods from their parent class.
+
+            // Let's create a parent class named Animal for two child classes named Cat and Dog.
+            class Animal {                  //  the Animal class contains the properties and methods that the Cat and Dog classes share (name, behavior, .incrementBehavior()).
+                constructor(name) {
+                    this._name = name;
+                    this._behavior = 0;
+                }
+                
+                get name() {
+                    return this._name;
+                }
+                
+                get behavior() {
+                    return this._behavior;
+                }   
+                
+                incrementBehavior() {
+                    this._behavior++;
+                }
+            } 
+
+            class Cat extends Animal {              // The 'extends' keyword makes the methods of the animal class available inside the cat class.
+                constructor(name, usesLitter) {
+                    super(name);                    // The super keyword calls the constructor of the parent class.
+                    this._usesLitter = usesLitter;
+                }
+                get usesLitter() {
+                    return this._usesLitter;
+                }
+            }
+            class Dog extends Animal {
+                constructor(name) {
+                    super(name);
+                }
+            }
+            // In a constructor(), you must always call the 'super' method before you can use the 'this' keyword — if you do not, JavaScript will throw a reference error.
+
+            // create a new Cat instance
+            const bryceCat = new Cat('Bryce', false); 
+            console.log(bryceCat._name); // output: Bryce       // we abandoned best practices by calling our _name property directly. In the next exercise, we’ll address this by calling an inherited getter method for our name property.
+
+        Static Methods
+            Sometimes you will want a class to have methods that aren’t available in individual instances, but that you can call directly from the class.
+            e.g. Date.now()     // The .now() method is static, so you can call it directly from the class, but not from an instance of the class.
+
+            class Animal {
+                constructor(name) {
+                    this._name = name;
+                    this._behavior = 0;
+                }
+                
+                static generateName() {
+                    const names = ['Angel', 'Spike', 'Buffy', 'Willow', 'Tara'];
+                    const randomNumber = Math.floor(Math.random()*5);
+                    return names[randomNumber];
+                }
+            } 
+            console.log(Animal.generateName()); // returns a name
+            const tyson = new Animal('Tyson');  // You cannot access the .generateName() method from instances of the Animal class or instances of its subclasses
+            tyson.generateName(); // TypeError
+
+    MODULES
+        JavaScript modules are reusable pieces of code that can be exported from one program and imported for use in another program.
+        Separate code with similar logic into files called modules.
+        Syntax:
+            - require()  /  module.exports 
+                Every JavaScript file run in Node has a local module object with an exports property used to define what should be exported from the file.
+                    let Menu = {};
+                    Menu.specialty = "Roasted Beet Burger with Mint Sauce";
+                    module.exports = Menu; 
+
+                    or
+
+                    module.exports = {
+                        specialty: "Roasted Beet Burger with Mint Sauce",
+                        getSpecialty: function() {
+                            return this.specialty;
+                        } 
+                    }; 
+    
+                In Node.js, use the require() function to import modules.
+                    const Menu = require('./menu.js');
+                    function placeOrder() {
+                      console.log('My order is: ' + Menu.specialty);
+                    }
+                    placeOrder();
+            - ES6 import/export
+                Two techniques: default export and named exports.
+                Node.js doesn’t support export default by default, so module.exports is usually used for Node.js development and ES6 syntax is used for front-end development.
+                    // Default Export
+                    let Menu = {};
+                    export default Menu;
+
+                    import Menu from './menu';
+                    
+                    // Named Exports (allow us to export data through the use of variables.)
+                    let specialty = '';
+                    function isVegetarian() {}; 
+                    function isLowSodium() {}; 
+                    export { specialty, isVegetarian };
+
+                    or 
+
+                    export let specialty = '';
+                    export function isVegetarian() {}; 
+                    function isLowSodium() {}; 
+
+                    or 
+
+                    // Export as: Named exports also conveniently offer a way to change the name of variables when we export or import them. We can do this with the as keyword.
+                    export { specialty as chefsSpecial, isVegetarian as isVeg, isLowSodium };
+                    import { chefsSpecial, isVeg } from './menu';
+                    import * as Carte from './menu';    // Another way of using aliases is to import the entire module as an alias:
+
+                    //Named Imports
+                    import { specialty, isVegetarian } from './menu';
+                    console.log(specialty);
+
+                Combining Export Statements: We can also use named exports and default exports together.
+                    let specialty = '';
+                    function isVegetarian() {}; 
+                    function isLowSodium() {}; 
+                    function isGlutenFree() {};
+                    export { specialty as chefsSpecial, isVegetarian as isVeg };
+                    export default isGlutenFree;
+                Combining Import Statements
+                    import { specialty, isVegetarian, isLowSodium } from './menu';
+                    import GlutenFree from './menu';
+
+    ERRORS AND ERROR Handling
+        There are entire engineering roles built around finding and fixing errors: 
+            A site reliability engineer finds and report errors in web platforms. 
+            A test engineer builds automated tests to discover errors in software and make sure that it meets a companies standards.
+        A piece of software, called a compiler, is trying to translate your code so that your computer can understand and run it. However, the compiler is coming across a piece of code that it can’t interpret. As a result, it throws an error back to you to let you know that it has to stop and why.
+        This information is logged as an 'error stack trace' — a printed message containing information about where the error occurred, what type of error was thrown, and a description of the error.
+        to debug an error, ask yourself:
+            1-In what line did the error occur?     // e.g. 1
+            2-What type of error was thrown?        // e.g. ReferenceError
+            3-What is the error message?            // e.g. myVariable is not defined
+        JavaScript Error Types:
+            - SyntaxError       // when a typo creates invalid code
+            - ReferenceError    // will be thrown if you try to use a variable that does not exist.
+            - TypeError         // if you attempt to perform an operation on a value of the wrong type. 
+            - other four types: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+        
+        Locating Silent Bugs (debugging)
+            Is your code broken but not throwing errors? Walk through your code using console.log() statements. When unexpected results occur, isolate the bug and try to fix it.
+        Steps on debugging: try to fix -> google/stackoverflow -> check documentation
+
+        Runtime Errors
+            When we execute code and a line of code throws an error, that error is referred to as a runtime error. 
+            We can use the Error function to make our own error object with a message that is unique to our program!
+                console.log(Error('Your password is too weak.'));
+                console.log(new Error('Your password is too weak.'));
+            Creating an error is not the same as throwing an error. A thrown error will cause the program to stop running.
+            To throw an error in JavaScript, we use the throw keyword:
+                throw Error('Something wrong happened');    // Error: Something wrong happened
+                console.log('This will never run');
+            Up to this point, thrown errors have caused our program to stop running.
+            In JavaScript, we use try...catch statement to anticipate and handle errors. 
+                try {
+                    throw Error('This error will get caught');  
+                } catch (e) {
+                    console.log(e);     // Prints: This error will get caught
+                }
+                console.log('The thrown error that was caught in the try...catch statement!');  // Prints: 'The thrown error that was caught in the try...catch statement!'
+            We can also use a try...catch statement to handle built-in errors that are thrown by the JavaScript engine.
+                const someVar = 'Cannot be reassigned';
+                try {
+                    someVar = 'Still going to try';
+                } catch(e) {
+                    console.log(e);     // Prints: TypeError: Assignment to constant variable.
+                }
+
+    PROMISES
+        Promise object, introduced with ES6. 
+         A Promise object can be in one of three states:
+            - Pending: The initial state— the operation has not completed yet.
+            - Fulfilled: The operation has completed successfully and the promise now has a resolved value. For example, a request’s promise might resolve with a JSON object as its value.
+            - Rejected: The operation has failed and the promise has a reason for the failure. 
+        To create a new Promise object(use 'new' keyword, 'Promise' constructor method):
+            const executorFunction = (resolve, reject) => { };
+            const myFirstPromise = new Promise(executorFunction);
+                - resolve is a function with one argument. Under the hood, if invoked, resolve() will change the promise’s status from pending to fulfilled, and the promise’s resolved value will be set to the argument passed into resolve().
+                - reject is a function that takes a reason or error as an argument. Under the hood, if invoked, reject() will change the promise’s status from pending to rejected, and the promise’s rejection reason will be set to the argument passed into reject().
+            
+            const executorFunction = (resolve, reject) => {
+                if (someCondition) {
+                    resolve('I resolved!');
+                } else {
+                    reject('I rejected!'); 
+                }
+            }
+            const myFirstPromise = new Promise(executorFunction);
+
+        Knowing how to construct a promise is useful, but most of the time, knowing how to consume, or use, promises will be key. 
+        Rather than constructing promises, you’ll be handling Promise objects returned to you as the result of an asynchronous operation.
+
+        To construct asynchronous promises using setTimeout():
+            const returnPromiseFunction = () => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(( ) => {resolve('I resolved!')}, 1000);
+                });
+            };
+            const prom = returnPromiseFunction();   // we invoked returnPromiseFunction() which returned a promise. prom will initially have a status of pending.
+
+        Promise objects come with an aptly named .then() method. 
+        .then() is a higher-order function— it takes two callback functions as arguments. We refer to these callbacks as handlers. When the promise settles, the appropriate handler will be invoked with that settled value.
+            - The first handler, sometimes called onFulfilled, is a success handler, and it should contain the logic for the promise resolving.
+            - The second handler, sometimes called onRejected, is a failure handler, and it should contain the logic for the promise rejecting.
+        We can invoke .then() with one, both, or neither handler! One important feature of .then() is that it always returns a promise. 
+            const prom = new Promise((resolve, reject) => {
+                resolve('Yay!');
+            });
+            const handleSuccess = (resolvedValue) => {
+                console.log(resolvedValue);
+            };
+            prom.then(handleSuccess); // Prints: 'Yay!'
+
+            // Another example:
+            let prom = new Promise((resolve, reject) => {
+                let num = Math.random();
+                if (num < .5 ){
+                    resolve('Yay!');
+                } else {
+                    reject('Ohhh noooo!');
+                }
+            });
+            const handleSuccess = (resolvedValue) => {
+                console.log(resolvedValue);
+            };
+            const handleFailure = (rejectionReason) => {
+                console.log(rejectionReason);
+            };
+            prom.then(handleSuccess, handleFailure);
+
+            // Another example
+
+            //app.js
+            const {checkInventory} = require('./library.js');
+            const order = [['sunglasses', 1], ['bags', 2]];
+            const handleSuccess = (resolved) =>{
+              console.log(resolved)
+            }
+            const handleFailure = (rejected) => {
+              console.log(rejected)
+            }
+            checkInventory(order).then(handleSuccess, handleFailure);
+
+            // library.js
+            const inventory = {
+                sunglasses: 1900,
+                pants: 1088,
+                bags: 1344
+            };
+            const checkInventory = (order) => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        let inStock = order.every(item => inventory[item[0]] >= item[1]);
+                        if (inStock) {
+                            resolve(`Thank you. Your order was successful.`);
+                        } else {
+                            reject(`We're sorry. Your order could not be completed because some items are sold out.`);
+                        }
+                    }, 1000);
+                })
+            };
+            module.exports = { checkInventory };
+
+        One way to write cleaner code is to follow a principle called separation of concerns. Separation of concerns means organizing code into distinct sections each handling a specific task. 
+        Instead of passing both handlers into one .then(), we can chain a second .then() with a failure handler to a first .then() with a success handler and both cases will be handled.
+        To create even more readable code, we can use a different promise function: .catch().
+        The .catch() function takes only one argument, onRejected. 
+            prom
+                .then((resolvedValue) => {
+                    console.log(resolvedValue);
+                })
+                .catch((rejectionReason) => {
+                    console.log(rejectionReason);
+                });
+        
+        Chaining Multiple Promises:
+        This process of chaining promises together is called composition. 
+            firstPromiseFunction()
+            .then((firstResolveVal) => {
+              return secondPromiseFunction(firstResolveVal);
+            })
+            .then((secondResolveVal) => {
+              console.log(secondResolveVal);
+            });
+        Promise composition allows for much more readable code than the nested callback syntax that preceded it.
+        Common Mistakes(doesn’t follow best practices):    
+            Mistake 1: Nesting promises instead of chaining them.
+            Mistake 2: Forgetting to return a promise.      // won’t throw an error
+
+        Promise.all()
+        To maximize efficiency we should use 'concurrency', multiple asynchronous operations happening together. 
+        With promises, we can do this with the function Promise.all().
+        Promise.all() accepts an array of promises as its argument and returns a single promise.
+            let myPromises = Promise.all([returnsPromOne(), returnsPromTwo(), returnsPromThree()]);
+            myPromises
+              .then((arrayOfValues) => {
+                console.log(arrayOfValues);
+              })
+              .catch((rejectionReason) => {
+                console.log(rejectionReason);
+              });
+
+
+    ASYNC-AWAIT
+        callback    - Originally, JavaScript used callback functions to handle asynchronous actions. The problem with callbacks is that they encourage complexly nested code which quickly becomes difficult to read, debug, and scale.
+        promises    - With ES6, JavaScript integrated native promises which allow us to write significantly more readable code.
+        async       - ES8 provides a new syntax for handling our asynchronous action, async...await. The async...await syntax is syntactic sugar— it doesn’t introduce new functionality into the language, but rather introduces a new syntax for using promises and generators. 
+
+        // async keyword
+            async function myFunc() {
+              // Function body here
+            };
+            myFunc();
+        
+        // async function expressions
+            const myFunc = async () => {
+              // Function body here
+            };
+            myFunc();
+        
+        async functions always return a promise. This means we can use traditional promise syntax, like .then() and .catch with our async functions.
+        The await keyword can only be used inside an async function.
+        With async...await, we use try...catch statements for error handling.
+
+        Handling Independent Promises
+            async function waiting() {
+                const firstValue = await firstAsyncThing();
+                const secondValue = await secondAsyncThing();
+                console.log(firstValue, secondValue);
+            }
+
+            async function concurrent() {
+                const firstPromise = firstAsyncThing();
+                const secondPromise = secondAsyncThing();
+                console.log(await firstPromise, await secondPromise);
+            }
+        Await Promise.all()
+
+    REQUESTS
+        Terms: HTTP, TCP, URL, DNS, IP, HTTPS.
+        HTTP stands for Hypertext Transfer Protocol and is used to structure requests and responses over the internet. HTTP requires data to be transferred from one point to another over the network.
+        The transfer of resources happens using TCP (Transmission Control Protocol). In viewing this webpage, TCP manages the channels between your browser and the server (in this case, codecademy.com).
+
+        HTTP & TCP: How it Works
+            When you type an address such as www.codecademy.com into your browser, you are commanding it to open a TCP channel to the server that responds to that URL (or Uniform Resource Locator, which you can read more about on Wikipedia). A URL is like your home address or phone number because it describes how to reach you.
+            In this situation, your computer, which is making the request, is called the client. The URL you are requesting is the address that belongs to the server.
+            Once the TCP connection is established, the client sends a HTTP GET request to the server to retrieve the webpage it should display. After the server has sent the response, it closes the TCP connection. If you open the website in your browser again, or if your browser automatically requests something from the server, a new connection is opened which follows the same process described above. GET requests are one kind of HTTP method a client can call. 
+            After you type the URL into your browser, your browser will extract the http part and recognize that it is the name of the network protocol to use. Then, it takes the domain name from the URL, in this case “codecademy.com”, and asks the internet Domain Name Server to return an Internet Protocol (IP) address. The client then opens a connection to the server at that address, using the http protocol as specified. It will initiate a GET request to the server which contains the IP address of the host and optionally a data payload.
+            The GET request contains the following text:
+                GET / HTTP/1.1
+                Host: www.codecademy.com
+            If the server is able to locate the path requested, the server might respond with the header:
+                HTTP/1.1 200 OK                 // This line is confirmation that the server understands the protocol that the client wants to communicate with (HTTP/1.1), and an HTTP status code signifying that the resource was found on the server.
+                Content-Type: text/html         // This line shows the type of content that it will be sending to the client.
+            If the server is not able to locate the path requested by the client, it will respond with the header:
+                HTTP/1.1 404 NOT FOUND          // This might happen if the content was moved or if you typed in the URL path incorrectly or if the page was removed. 
+        HTTPS
+            Since your HTTP request can be read by anyone at certain network junctures, it might not be a good idea to deliver information such as your credit card or password using this protocol. Fortunately, many servers support HTTPS, short for HTTP Secure, which allows you to encrypt data that you send and receive.
+            It is up to the businesses maintaining the servers to set it up. In order to support HTTPS, the business must apply for a certificate from a Certificate Authority.
+            HTTP request methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+            
+        Requests
+            In this lesson, we will explain how to make GET and POST requests by using JavaScript’s XHR object. 
+            We’ll use the Datamuse API for GET requests and the Rebrandly URL Shortener API for POST requests.
+            JSON, JavaScript Object Notation, will be the format in which our data is sent to us. 
+    
+        XHR GET Requests
+            Asynchronous JavaScript and XML (AJAX), enables requests to be made after the initial page load. 
+            Initially, AJAX was used only for XML formatted data, now it can be used to make requests that have many different formats.
+            XMLHttpRequest (XHR) API, named for XML, can be used to make many kinds of requests and supports other forms of data.
+            XHR GET diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/XHR+GET+diagram.svg
+
+            Boilerplate code for an AJAX GET request using an XMLHttpRequest object:
+                const xhr = new XMLHttpRequest();
+                const url = 'https://api-to-call.com/endpoint';
+                xhr.responseType = 'json';
+                xhr.onreadystatechange = () =>{
+                  if (xhr.readyState === XMLHttpRequest.DONE) {
+                    return xhr.response
+                  }
+                }
+                xhr.open('GET', url);   // creates a new request
+                xhr.send();
+
+            Datamuse API Documentation: https://www.datamuse.com/api/
+
+            Now incorporate that boilerplate code to make a GET request to the Datamuse API to search for words that rhyme:
+
+        XHR POST Requests
+            The major difference between a GET request and POST request is that a POST request requires additional information to be sent through the request. This additional information is sent in the body of the post request.
+            Rebrandly URL Shortener API https://developers.rebrandly.com/docs -> register for a free Rebrandly account -> click on account icon (in the top right hand corner) -> Account settings -> Select the tab “API keys” -> Click on the button “Generate new API key”.
+            XHR POST diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/XHR+POST+diagram.svg
+                const xhr = new XMLHttpRequest();
+                const url = 'https://api-to-call.com/endpoint';
+                const data = JSON.stringify({id: '200'});
+                xhr.responseType = 'json';
+                xhr.onreadystatechange = () => {
+                    if(xhr.readyState === XMLHttpRequest.DONE){
+                        return xhr.response()
+                    }
+                }
+                xhr.open('POST', url);
+                xhr.send(data);
+        
+        -----   AJAX requests using fetch(), async, and await
+        Requests with ES6
+            In this lesson, we will explain how to use fetch(), which uses promises to handle requests. Then, we will simplify requests using async and await.
+
+        GET requests using fetch()
+            fetch() GET diagram:  https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/fetch+GET+diagram.svg
+            The fetch() function:
+                - Creates a request object that contains relevant information that an API needs.
+                - Sends that request object to the API endpoint provided.
+                - Returns a promise that ultimately resolves to a response object, which contains the status of the promise with information the API sent back.
+            
+                fetch('https://api-to-call.com/endpoint').then((response)=>{
+                    if(response.ok){
+                        return response.json();
+                    }
+                    throw new Error('Request failed!')
+                }, (networkError)=>{
+                    console.log(networkError.message)
+                }).then((jsonResponse)=>{
+                    return jsonResponse
+                })
+
+        fetch() POST Requests
+            Notice that the initial call takes two arguments: an endpoint and an object that contains information needed for the POST request. The rest of the request is identical to the GET request.
+            fetch() POST diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/fetch+POST+diagram.svg
+        
+        async GET Requests
+            async/await GET diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/async+await+GET+diagram.svg
+
+            const getData = async ()=>{
+                try {
+                    const response = await fetch('https://api-to-call.com/endpoint');
+                    if(response.ok){
+                        const jsonResponse = await response.json();
+                        return jsonResponse;
+                    }
+                    throw new Error('Request failed!')
+                } catch(error) {
+                    console.log(error);   // Generally, developers create a more sophisticated way of handling the error, like redirecting their users to another page, but logging is fine for us at the moment.
+                }
+            }
+
+        async POST Requests
+            We still have the same structure of using try and catch as before. But, in the fetch() call, we now have to include an additional argument that contains more information like method and body.
+            async/await POST diagram: https://s3.amazonaws.com/codecademy-content/courses/intermediate-javascript-requests/diagrams/async+await+POST+diagram.svg
+
+                const getData = async ()=> {
+                    try{
+                        const response = await fetch('https://api-to-call.com/endpoint', {
+                            method: 'POST',
+                            body: JSON.stringify({id: 200})
+                        });
+                        if(response.ok){
+                            const jsonResponse = await response.json();
+                            return jsonResponse;
+                        }
+                        throw new Error('Request failed!');
+                    } catch(error) {
+                        console.log(error)
+                    }
+                }
+            If you’re going to make POST requests, make sure you assign apiKey your Rebrandly API key.
+
+        Foursquare API: https://developer.foursquare.com/   -> register for developer accounts for both of the APIs -> create a new app and fill out the form (you can put any link in the “App or Company URL” field). The Foursquare API will then give you a client ID and a client secret. You’ll need to save both of those in main.js.
+        OpenWeather API: https://openweathermap.org/current -> register for developer accounts for both of the APIs -> Registration process: How to start: https://openweathermap.org/guide/#how -> When prompted, use your first name, and 'other' for the OpenWeather questions for their data collection. OpenWeather will give you an API Key, which you’ll also need to save in main.js.
+
+
+
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 8. Learn the Command Line
+    Terms: command line, filesystem, directories, wildcards, redirection
+    NAVIGATION
+        > ls 
+        In the terminal, first you see $. This is called a shell prompt. It appears when the terminal is ready to accept a command.
+        A filesystem organizes a computer’s files and directories into a tree structure:
+            - The first directory in the filesystem is the root directory. It is the parent of all other directories and files in the filesystem.
+            - Each parent directory can contain more child directories and files. 
+            - Each directory can contain more files and child directories. 
+        > pwd   // stands for “print working directory”, It outputs the name of the directory you are currently in, called the working directory.
+        > cd 2015 // stands for “change directory”.
+        > cd ..
+        > mkdir media   // stands for “make directory”
+        > touch keyboard.txt    // creates a new file inside the working directory. 
+        Command Line Interfaces (CLIs) come in many forms. The CLI we’ll use is called Bash.
+        Bash, or the Bourne-Again SHell, is a CLI that was created as a free software replacement for the Bourne Shell. A shell is a specific kind of CLI.
+        Bash is the default shell for Linux and Mac. For these reasons, Bash is the most used and widely distributed shell. 
+        To access Bash in OS X, you can use an application called Terminal.
+        Windows has a different CLI, called Command Prompt. To use Bash on a Windows computer, we will download and install a program called Git Bash.
+    MANIPULATION    // copy, move, and remove files and directories
+        > ls -a     // The -a is called an option. 
+            -a - lists all contents, including hidden files and directories
+            -l - lists all contents of a directory in long format
+                Columns:
+                    Access rights. These are actions that are permitted on a file or directory.
+                    Number of hard links. This number counts the number of child directories and files. This number includes the parent directory link (..) and current directory link (.).
+                    The username of the file’s owner. Here the username is cc.
+                    The name of the group that owns the file. Here the group name is eng.
+                    The size of the file in bytes.
+                    The date & time that the file was last modified.
+                    The name of the file or directory.
+            -t - order files and directories by the time they were last modified.
+        > cp frida.txt lincoln.txt  // copy the contents of frida.txt into lincoln.txt.
+        > cp biopic/ray.txt biopic/notorious.txt historical/    // To copy multiple files into a directory, use cp with a list of source files as the first arguments, and the destination directory as the last argument. 
+        > cp * satire/ 
+        > cp m*.txt scifi/  // copy of all text files starting with “m”
+        In addition to using filenames as arguments, we can use special characters like * to select groups of files. These special characters are called wildcards. The * selects all files in the working directory.
+        > mv superman.txt superhero/ 
+        > mv batman.txt spiderman.txt   // to rename a file, e.g. batman.txt has been renamed as spiderman.txt.
+        > rm waterboy.txt 
+        > rm -r slapstick   // The -r stands for “recursive,” and it’s used to delete a directory and all of its child directories.
+    REDIRECTION
+        The common redirection commands are:
+            > redirects standard output of a command to a file, overwriting previous content.
+            >> redirects standard output of a command to a file, appending new content to old content.
+            < redirects standard input to a command.
+            | redirects standard output of a command to another command.
+
+        Through redirection you can direct the input and output of a command to and from other files and programs, and chain commands together in a pipeline.
+        > echo "Hello"  // The echo command accepts the string “Hello” as standard input, and echoes the string “Hello” back to the terminal as standard output.
+            standard input,     abbreviated as stdin, is information inputted into the terminal through the keyboard or input device.
+            standard output,    abbreviated as stdout, is the information outputted after a process is run.
+            standard error,     abbreviated as stderr, is an error message outputted by a failed process.
+        > echo "Hello" > hello.txt  // redirect, The > command redirects the standard output to a file. "Hello" is entered as the standard input.
+        > cat hello.txt 
+        > cat oceans.txt > continents.txt // > takes the standard output of the command on the left, and redirects it to the file on the right.
+            When you view the output data by typing cat on continents.txt, you will see only the contents of oceans.txt.
+        > cat glaciers.txt >> rivers.txt    // to see both rivers and glaciers as output.
+            >> takes the standard output of the command on the left and appends (adds) it to the file on the right.
+        > cat < lakes.txt // < takes the standard input from the file on the right and inputs it into the program on the left. Here, lakes.txt is the standard input for the cat command. The standard output appears in the terminal.
+        > cat volcanoes.txt | wc 
+            | is a “pipe”. The | takes the standard output of the command on the left, and pipes it as standard input to the command on the right. You can think of this as “command to command” redirection.
+            wc command outputs the number of lines, words, and characters in volcanoes.txt
+        > sort lakes.txt    // takes the standard input and orders it alphabetically for the standard output. 
+        > cat lakes.txt | sort > sorted-lakes.txt
+        > uniq deserts.txt  //  stands for “unique” and filters out adjacent, duplicate lines in a file. 
+        > sort deserts.txt | uniq 
+        > grep Mount mountains.txt  // grep stands for “global regular expression print”. It searches files for lines that match a pattern and returns the results. It is also case sensitive. Here, grep searches for “Mount” in mountains.txt.
+        > grep -i Mount mountains.txt   // grep -i enables the command to be case insensitive.
+        grep can also be used to search within a directory. 
+        > grep -R Arctic /home/ccuser/workspace/geography   // -R stands for “recursive”. 
+        > grep -Rl Arctic /home/ccuser/workspace/geography  // l stands for “files with matches”
+        > sed 's/snow/rain/' forests.txt    // sed stands for “stream editor”. It accepts standard input and modifies it based on an expression, before displaying it as output data. It is similar to “find and replace”.
+            Let’s look at the expression 's/snow/rain/':
+                s: stands for “substitution”. it is always used when using sed for substitution.
+                snow: the search string, the text to find.
+                rain: the replacement string, the text to add in place.
+                In this case, sed searches forests.txt for the word “snow” and replaces it with “rain.”
+                Importantly, the above command will only replace the first instance of “snow” on a line.
+        > sed 's/snow/rain/g' forests.txt 
+            The above command uses the g expression, meaning “global”. Here sed searches forests.txt for the word “snow” and replaces it with “rain”, globally. All instances of “snow” on a line will be turned to “rain”.
+    ENVIRONMENT
+        nano is a command line text editor. 
+        > nano hello.txt    // to open the nano text editor.
+            type Ctrl + O to save the file.     The ^ stands for the Ctrl key.
+            Press Enter, when prompted about the filename to write.
+            Ctrl + X to exit nano.
+        > clear         // to clear the terminal window. 
+        > source ~/.bash_profile    // to activate the changes in ~/.bash_profile for the current session. Instead of closing the terminal and needing to start a new session, source makes the changes available right away in the session we are in.
+            In .bash_profile add: 
+                echo "Welcome, Jane Doe" 
+                alias pd="pwd"          // The alias command allows you to create keyboard shortcuts, or aliases, for commonly used commands.
+                export USER="Jane Doe"  // (environment variables)to return the value of the variable type: $echo $USER 
+                export PS1=">> "        // (environment variables)to change prompt from defaul $ to >>. PS1 is a variable that defines the makeup and style of the command prompt.
+            ~/.bash_profile is the name of file used to store environment settings
+        > echo $HOME
+        > echo $PATH  // Each directory contains scripts for the command line to execute. 
+            home/ccuser/.gem/ruby/2.0.0/bin
+            /usr/local/sbin
+            /usr/local/bin
+            /usr/bin
+            /usr/sbin
+            /sbin
+            /bin
+        > /bin/pwd    // This is the script that is executed when you type the pwd command.
+        > /bin/ls     // This is the script that is executed when you type the ls command.
+        > env           // returns a list of the environment variables for the current user.
+        > less file.txt     // similar to cat, but is better adapted to handling larger files. Type q to quit.
+    BASH SCRIPTING
+        Bash (or shell) scripting is a great way to automate repetitive tasks.
+        Bash scripts execute within a Bash shell interpreter terminal. Any command you can run in your terminal can be run in a Bash script.
+        The beginning of your script file should start with #!/bin/bash on its own line. // This tells the computer which type of interpreter to use for the script. 
+        When saving the script file, it is good practice to place commonly used scripts in the ~/bin/ directory.
+        The script files also need to have the “execute” permission to allow them to be run. 
+        To add this permission to a file with filename: script.sh use:
+            chmod +x script.sh
+        Your terminal runs a file every time it is opened to load its configuration. 
+            On Linux style shells, this is ~/.bashrc and 
+            on OSX, this is ~/.bash_profile. 
+        To ensure that scripts in ~/bin/ are available, you must add this directory to your PATH within your configuration file:
+            PATH=~/bin:$PATH
+        Now any scripts in the ~/bin directory can be run from anywhere by typing the filename.
+        Use ./script.sh to run the script.
+        Variables: 
+            greeting="Hello"    // variables are declared by setting the variable name equal to another value.
+            echo $greeting      // To access the value of a variable, we use the variable name prepended with a dollar sign ($).
+        Conditionals:
+            Use if to start the conditional, followed by the condition in square brackets ([ ]).
+            'then' begins the code that will run if the condition is met. 
+            'else' begins the code that will run if the condition is not met. 
+            The conditional is closed with a backwards if, fi.
+            Operators:
+                Equal: -eq
+                Not equal: -ne
+                Less than or equal: -le
+                Less than: -lt
+                Greater than or equal: -ge
+                Greater than: -gt
+                Is null: -z
+                Equal: ==
+                Not equal: !=
+            e.g.
+                if [ $index -lt 5 ]
+                then
+                    echo $index
+                else
+                    echo 5
+                fi
+        Loops:  // for, while and until.
+            for word in $paragraph
+            do
+                echo $word
+            done
+
+            while [ $index -lt 5 ]
+            do
+                echo $index
+                index=$((index + 1))
+            done
+
+            until [ $index -eq 5 ]
+            do
+                echo $index
+                index=$((index + 1))
+            done
+        Inputs
+            To make bash scripts more useful, we need to be able to access data external to the bash script file itself. 
+            1-The first way to do this is by prompting the user for input. For this, we use the 'read' syntax. To ask the user for input and save it to the number variable:
+                echo "Guess a number"
+                read number
+                echo "You guessed $number"
+            2-Another way to access external data is to have the user add input arguments when they run your script. These arguments are entered after the script name and are separated by spaces.
+                e.g. saycolors red green blue
+            3-Lastly, we can access external files to our script. You can assign a set of files to a variable name using standard bash pattern matching using regular expressions. 
+                files=/some/directory/*
+                for file in $files
+                do
+                    echo $file
+                done
+        Aliases
+            e.g.    alias saycolors='./saycolors.sh'
+                    alias saycolors='./saycolors.sh "green"'    // add standard input arguments to your alias
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
 9. Learn Git
+    BASIC GIT WORKFLOW
+        > git init
+        Three parts of Git ptoject:
+            - git init->    A Working Directory:  where you’ll be doing all the work: creating, editing, deleting and organizing files
+            - git add->     A Staging Area:       where you’ll list changes you make to the working directory
+            - git commit->  A Repository:         where Git permanently stores those changes as different versions of the project
+        > git status
+        > git add filename
+        > git diff filename     // to check the differences between the working directory and the staging area
+        > git commit -m "Complete first line of dialogue"
+        Standard Conventions for Commit Messages:
+            - Must be in quotation marks
+            - Written in the present tense
+            - Should be brief (50 characters or less) when using -m
+        > git log               // to view commits that are stored chronologically in the repository
+        In the output, notice:
+            A 40-character code, called a SHA, that uniquely identifies the commit. This appears in orange text.
+            The commit author (you!)
+            The date and time of the commit
+            The commit message
+    HOW TO BACKTRACK
+        In many cases, the most recently made commit is the HEAD commit.
+        > git show HEAD         // To see the HEAD commit
+        // вернуть предыдущую версию файла после git commit:
+        > git checkout HEAD filename    // (re-open the file to see the result) To restore a file in the working directory to look as it did in your last commit
+        > git checkout -- filename      // the same exact thing that 'git checkout HEAD filename' does.
+        // если сделала git add и нужно отменить:
+        > git reset HEAD filename       // unstage file from the staging area. In output, M is short for “modification”
+        > git reset commit_SHA  // e.g. if the SHA of the previous commit is 5d692065cf51a2f50ea8e7b19b5a7ae512f633ba, use: git reset 5d69206
+    GIT BRANCHING
+        Up to this point, you’ve worked in a single Git branch called master.    
+        Git allows us to create branches to experiment with versions of a project.
+        > git branch        // to answer the question: “which branch am I on?”
+            In the output, the * (asterisk) is showing you what branch you’re on.
+        > git branch new_branch     // To create a new branch
+        > git checkout branch_name  // to switch to the new branch
+        Every commit 'master' has, 'new_branch' also has.
+        > git merge branch_name     // (but be in 'master'(receiver) branch before running this command)if you wanted include all the changes made to the 'new_branch'(giver branch) on the 'master' branch(receiver branch)
+        The merge was successful because 'master' had not changed since we made a commit on 'new_branch'.
+        What would happen if you made a commit on master before you merged the two branches? -> merge conflict.
+        To fix the merge conflict:
+            Git uses markings to indicate the HEAD (master) version of the file and the fencing version of the file, like this:
+                <<<<<<< HEAD
+                master version of line
+                =======
+                fencing version of line
+                >>>>>>> fencing
+            Git asks us which version of the file to keep: the version on master or the version on fencing. You decide you want the fencing version.
+            From the code editor: Delete the content of the line as it appears in the master branch
+            Delete all of Git’s special markings including the words HEAD and fencing. If any of Git’s markings remain, for example, >>>>>>> and =======, the conflict remains.
+            Then 'git add ', git commit -m 'Resolve merge conflict'
+        > git branch -d branch_name     // delete branch
+            In Git, branches are usually a means to an end. You create them to work on a new project feature, 
+            but the end goal is to merge that feature into the master branch. After the branch has been 
+            integrated into master, it has served its purpose and can be deleted.
+    GIT TEAMWORK
+        A remote is a shared Git repository that allows multiple collaborators to work on the same Git project from different locations. 
+        Collaborators work on the project independently, and merge changes together when they are ready to do so.
+        > git clone remote_location clone_name  // In order to get your own replica of remote repository
+            remote_location     - tells Git where to go to find the remote. This could be a web address, or a filepath, such as: /Users/teachers/Documents/some-remote
+            clone_name          - is the name you give to the directory in which Git will clone the repository.
+        > git remote -v     // to see a list of a Git project’s remotes 
+            Notice the output:
+                origin    /home/ccuser/workspace/curriculum/science-quizzes (fetch)
+                origin    /home/ccuser/workspace/curriculum/science-quizzes (push)
+        > git fetch     // to see if changes have been made to the remote and bring the changes down to your local copy
+            This command will not merge changes from the remote into your local repository. It brings those changes onto what’s called a remote branch.
+        > git merge origin/master   // to integrate origin/master into your local master branch. 
+            Git has performed a “fast-forward” merge, bringing your local master branch up to speed with most recent commit on the remote.
+        
+        Now that you’ve merged origin/master into your local master branch, you’re ready to contribute some work of your own.
+        The workflow for Git collaborations typically follows this order:
+            1- Fetch and merge changes from the remote
+            2- Create a branch to work on a new project feature
+            3- Develop the feature on your branch and commit your work
+            4- Fetch and merge from the remote again (in case new commits were made while you were working)
+            5- Push your branch up to the remote for review
+            Steps 1 and 4 are a safeguard against merge conflicts.
+        > git push origin your_branch_name  // will push your branch up to the remote, origin. 
+            Someone can now review your new work and can merge it into the remote’s master branch.
+
 ************************************************************************************************
 ************************************************************************************************
 ************************************************************************************************
