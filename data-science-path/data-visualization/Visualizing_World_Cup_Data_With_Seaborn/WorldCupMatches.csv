@@ -1,0 +1,50 @@
+Year,Datetime,Stage,Stadium,City,Home Team Name,Home Team Goals,Away Team Goals,Away Team Name,Win conditions,Attendance,Half-time Home Goals,Half-time Away Goals,Referee,Assistant 1,Assistant 2,RoundID,MatchID,Home Team Initials,Away Team Initials
+1930,"13 Jul 1930 - 15:00 ",Group 1,Pocitos,"Montevideo ",France,4,1,Mexico," ",4444,3,0,LOMBARDI Domingo (URU),CRISTOPHE Henry (BEL),REGO Gilberto (BRA),201,1096,FRA,MEX
+1930,"13 Jul 1930 - 15:00 ",Group 4,Parque Central,"Montevideo ",USA,3,0,Belgium," ",18346,2,0,MACIAS Jose (ARG),MATEUCCI Francisco (URU),WARNKEN Alberto (CHI),201,1090,USA,BEL
+1930,"14 Jul 1930 - 12:45 ",Group 2,Parque Central,"Montevideo ",Yugoslavia,2,1,Brazil," ",24059,2,0,TEJADA Anibal (URU),VALLARINO Ricardo (URU),BALWAY Thomas (FRA),201,1093,YUG,BRA
+1930,"14 Jul 1930 - 14:50 ",Group 3,Pocitos,"Montevideo ",Romania,3,1,Peru," ",2549,1,0,WARNKEN Alberto (CHI),LANGENUS Jean (BEL),MATEUCCI Francisco (URU),201,1098,ROU,PER
+1930,"15 Jul 1930 - 16:00 ",Group 1,Parque Central,"Montevideo ",Argentina,1,0,France," ",23409,0,0,REGO Gilberto (BRA),SAUCEDO Ulises (BOL),RADULESCU Constantin (ROU),201,1085,ARG,FRA
+1930,"16 Jul 1930 - 14:45 ",Group 1,Parque Central,"Montevideo ",Chile,3,0,Mexico," ",9249,1,0,CRISTOPHE Henry (BEL),APHESTEGUY Martin (URU),LANGENUS Jean (BEL),201,1095,CHI,MEX
+1930,"17 Jul 1930 - 12:45 ",Group 2,Parque Central,"Montevideo ",Yugoslavia,4,0,Bolivia," ",18306,0,0,MATEUCCI Francisco (URU),LOMBARDI Domingo (URU),WARNKEN Alberto (CHI),201,1092,YUG,BOL
+1930,"17 Jul 1930 - 14:45 ",Group 4,Parque Central,"Montevideo ",USA,3,0,Paraguay," ",18306,2,0,MACIAS Jose (ARG),APHESTEGUY Martin (URU),TEJADA Anibal (URU),201,1097,USA,PAR
+1930,"18 Jul 1930 - 14:30 ",Group 3,Estadio Centenario,"Montevideo ",Uruguay,1,0,Peru," ",57735,0,0,LANGENUS Jean (BEL),BALWAY Thomas (FRA),CRISTOPHE Henry (BEL),201,1099,URU,PER
+1930,"19 Jul 1930 - 12:50 ",Group 1,Estadio Centenario,"Montevideo ",Chile,1,0,France," ",2000,0,0,TEJADA Anibal (URU),LOMBARDI Domingo (URU),REGO Gilberto (BRA),201,1094,CHI,FRA
+1930,"19 Jul 1930 - 15:00 ",Group 1,Estadio Centenario,"Montevideo ",Argentina,6,3,Mexico," ",42100,3,1,SAUCEDO Ulises (BOL),ALONSO Gualberto (URU),RADULESCU Constantin (ROU),201,1086,ARG,MEX
+1930,"20 Jul 1930 - 13:00 ",Group 2,Estadio Centenario,"Montevideo ",Brazil,4,0,Bolivia," ",25466,1,0,BALWAY Thomas (FRA),MATEUCCI Francisco (URU),VALLEJO Gaspar (MEX),201,1091,BRA,BOL
+1930,"20 Jul 1930 - 15:00 ",Group 4,Estadio Centenario,"Montevideo ",Paraguay,1,0,Belgium," ",12000,1,0,VALLARINO Ricardo (URU),MACIAS Jose (ARG),LOMBARDI Domingo (URU),201,1089,PAR,BEL
+1930,"21 Jul 1930 - 14:50 ",Group 3,Estadio Centenario,"Montevideo ",Uruguay,4,0,Romania," ",70022,4,0,REGO Gilberto (BRA),WARNKEN Alberto (CHI),SAUCEDO Ulises (BOL),201,1100,URU,ROU
+1930,"22 Jul 1930 - 14:45 ",Group 1,Estadio Centenario,"Montevideo ",Argentina,3,1,Chile," ",41459,2,1,LANGENUS Jean (BEL),CRISTOPHE Henry (BEL),SAUCEDO Ulises (BOL),201,1084,ARG,CHI
+1930,"26 Jul 1930 - 14:45 ",Semi-finals,Estadio Centenario,"Montevideo ",Argentina,6,1,USA," ",72886,1,0,LANGENUS Jean (BEL),VALLEJO Gaspar (MEX),WARNKEN Alberto (CHI),202,1088,ARG,USA
+1930,"27 Jul 1930 - 14:45 ",Semi-finals,Estadio Centenario,"Montevideo ",Uruguay,6,1,Yugoslavia," ",79867,3,1,REGO Gilberto (BRA),SAUCEDO Ulises (BOL),BALWAY Thomas (FRA),202,1101,URU,YUG
+1930,"30 Jul 1930 - 14:15 ",Final,Estadio Centenario,"Montevideo ",Uruguay,4,2,Argentina," ",68346,1,2,LANGENUS Jean (BEL),SAUCEDO Ulises (BOL),CRISTOPHE Henry (BEL),405,1087,URU,ARG
+1934,"27 May 1934 - 16:30 ",Preliminary round,Stadio Benito Mussolini,"Turin ",Austria,3,2,France,"Austria win after extra time ",16000,0,0,VAN MOORSEL Johannes (NED),CAIRONI Camillo (ITA),BAERT Louis (BEL),204,1104,AUT,FRA
+1934,"27 May 1934 - 16:30 ",Preliminary round,Giorgio Ascarelli,"Naples ",Hungary,4,2,Egypt," ",9000,2,2,BARLASSINA Rinaldo (ITA),DATTILO Generoso (ITA),SASSI Otello (ITA),204,1119,HUN,EGY
+1934,"27 May 1934 - 16:30 ",Preliminary round,San Siro,"Milan ",Switzerland,3,2,Netherlands," ",33000,2,1,EKLIND Ivan (SWE),BERANEK Alois (AUT),BONIVENTO Ferruccio (ITA),204,1133,SUI,NED
+1934,"27 May 1934 - 16:30 ",Preliminary round,Littorale,"Bologna ",Sweden,3,2,Argentina," ",14000,1,1,BRAUN Eugen (AUT),CARRARO Albino (ITA),TURBIANI Giuseppe (ITA),204,1102,SWE,ARG
+1934,"27 May 1934 - 16:30 ",Preliminary round,Giovanni Berta,"Florence ",Germany,5,2,Belgium," ",8000,1,2,MATTEA Francesco (ITA),MELANDRI Ermenegildo (ITA),BAERT Jacques (FRA),204,1108,GER,BEL
+1934,"27 May 1934 - 16:30 ",Preliminary round,Luigi Ferraris,"Genoa ",Spain,3,1,Brazil," ",21000,3,0,BIRLEM Alfred (GER),CARMINATI Ettore (ITA),IVANCSICS Mihaly (HUN),204,1111,ESP,BRA
+1934,"27 May 1934 - 16:30 ",Preliminary round,Nazionale PNF,"Rome ",Italy,7,1,USA," ",25000,3,0,MERCET Rene (SUI),ESCARTIN Pedro (ESP),ZENISEK Bohumil (TCH),204,1135,ITA,USA
+1934,"27 May 1934 - 16:30 ",Preliminary round,Littorio,"Trieste ",Czechoslovakia,2,1,Romania," ",9000,0,1,LANGENUS Jean (BEL),SCARPI Giuseppe (ITA),SCORZONI Raffaele (ITA),204,1141,TCH,ROU
+1934,"31 May 1934 - 16:30 ",Quarter-finals,Stadio Benito Mussolini,"Turin ",Czechoslovakia,3,2,Switzerland," ",12000,1,1,BERANEK Alois (AUT),MOHAMED Youssuf (EGY),BAERT Jacques (FRA),418,1143,TCH,SUI
+1934,"31 May 1934 - 16:30 ",Quarter-finals,San Siro,"Milan ",Germany,2,1,Sweden," ",3000,0,0,BARLASSINA Rinaldo (ITA),MERCET Rene (SUI),VAN MOORSEL Johannes (NED),418,1129,GER,SWE
+1934,"31 May 1934 - 16:30 ",Quarter-finals,Giovanni Berta,"Florence ",Italy,1,1,Spain," ",35000,0,0,BAERT Louis (BEL),ZENISEK Bohumil (TCH),IVANCSICS Mihaly (HUN),418,1122,ITA,ESP
+1934,"31 May 1934 - 16:30 ",Quarter-finals,Littorale,"Bologna ",Austria,2,1,Hungary," ",23000,1,0,MATTEA Francesco (ITA),ESCARTIN Pedro (ESP),BIRLEM Alfred (GER),418,1106,AUT,HUN
+1934,"01 Jun 1934 - 16:30 ",Quarter-finals,Giovanni Berta,"Florence ",Italy,1,0,Spain," ",43000,1,0,MERCET Rene (SUI),IVANCSICS Mihaly (HUN),ZENISEK Bohumil (TCH),418,1123,ITA,ESP
+1934,"03 Jun 1934 - 16:30 ",Semi-finals,San Siro,"Milan ",Italy,1,0,Austria," ",35000,1,0,EKLIND Ivan (SWE),BAERT Louis (BEL),ZENISEK Bohumil (TCH),3492,1107,ITA,AUT
+1934,"03 Jun 1934 - 16:30 ",Semi-finals,Nazionale PNF,"Rome ",Czechoslovakia,3,1,Germany," ",15000,1,0,BARLASSINA Rinaldo (ITA),BERANEK Alois (AUT),ESCARTIN Pedro (ESP),3492,1130,TCH,GER
+1934,"07 Jun 1934 - 18:00 ",Match for third place,Giorgio Ascarelli,"Naples ",Germany,3,2,Austria," ",7000,3,1,CARRARO Albino (ITA),CAIRONI Camillo (ITA),ESCARTIN Pedro (ESP),3491,1105,GER,AUT
+1934,"10 Jun 1934 - 17:30 ",Final,Nazionale PNF,"Rome ",Italy,2,1,Czechoslovakia,"Italy win after extra time ",55000,0,0,EKLIND Ivan (SWE),BAERT Louis (BEL),IVANCSICS Mihaly (HUN),3490,1134,ITA,TCH
+1938,"04 Jun 1938 - 17:00 ",First round,Parc des Princes,"Paris ",Switzerland,1,1,Germany," ",27152,0,0,LANGENUS Jean (BEL),MARENCO Paul (FRA),VAN MOORSEL Johannes (NED),206,1165,SUI,GER
+1938,"05 Jun 1938 - 17:00 ",First round,Velodrome Municipale,"Reims ",Hungary,6,0,Dutch East Indies," ",9000,4,0,CONRIE Roger (FRA),DE LA SALLE Charles (FRA),WEINGARTNER Karl (AUT),206,1173,HUN,INH
+1938,"05 Jun 1938 - 17:00 ",First round,Stade Olympique,"Colombes ",France,3,1,Belgium," ",30454,2,1,WUETHRICH Hans (SUI),KRIST Gustav (TCH),BIRLEM Alfred (GER),206,1146,FRA,BEL
+1938,"05 Jun 1938 - 17:00 ",First round,Stade Municipal,"Toulouse ",Cuba,3,3,Romania," ",7000,0,0,SCARPI Giuseppe (ITA),VALPREDE Ferdinand (FRA),MERKCX Jean (FRA),206,1156,CUB,ROU
+1938,"05 Jun 1938 - 17:00 ",First round,Stade V�lodrome,"Marseilles ",Italy,2,1,Norway,"Italy win after extra time ",19000,0,0,BERANEK Alois (AUT),BOUTOURE D. (FRA),TREHOU D. (FRA),206,1179,ITA,NOR
+1938,"05 Jun 1938 - 17:30 ",First round,Stade de la Meinau,"Strasbourg ",Brazil,6,5,Poland,"Brazil win after extra time ",13452,0,0,EKLIND Ivan (SWE),POISSANT Louis (FRA),KISSENBERGER Ernest (FRA),206,1150,BRA,POL
+1938,"05 Jun 1938 - 18:30 ",First round,Cavee Verte,"Le Havre ",Czechoslovakia,3,0,Netherlands,"Czechoslovakia win after extra time ",11000,0,0,LECLERCQ Lucien (FRA),OLIVE D. (FRA),SDEZ Victor (FRA),206,1172,TCH,NED
+1938,"09 Jun 1938 - 18:00 ",First round,Stade Municipal,"Toulouse ",Cuba,2,1,Romania," ",8000,0,1,BIRLEM Alfred (GER),CAPDEVILLE Pierre (FRA),MARENCO Paul (FRA),206,1157,CUB,ROU
+1938,"09 Jun 1938 - 18:00 ",First round,Parc des Princes,"Paris ",Switzerland,4,2,Germany," ",20025,1,2,EKLIND Ivan (SWE),BAERT Louis (BEL),VAN MOORSEL Johannes (NED),206,1166,SUI,GER
+1938,"12 Jun 1938 - 17:00 ",Quarter-finals,Stade du Parc Lescure,"Bordeaux ",Brazil,1,1,Czechoslovakia," ",22021,0,0,VON HERTZKA Pal (HUN),SCARPI Giuseppe (ITA),DE LA SALLE Charles (FRA),429,1152,BRA,TCH
+1938,"12 Jun 1938 - 17:00 ",Quarter-finals,Victor Boucquey,"Lille ",Hungary,2,0,Switzerland," ",15000,1,0,BARLASSINA Rinaldo (ITA),BERANEK Alois (AUT),BOUTOURE D. (FRA),429,1175,HUN,SUI
+1938,"12 Jun 1938 - 17:00 ",Quarter-finals,Fort Carree,"Antibes ",Sweden,8,0,Cuba," ",7000,4,0,KRIST Gustav (TCH),WEINGARTNER Karl (AUT),SDEZ Victor (FRA),429,1158,SWE,CUB
+1938,"12 Jun 1938 - 17:00 ",Quarter-finals,Stade Olympique,"Colombes ",Italy,3,1,France," ",58455,1,1,BAERT Louis (BEL),WUETHRICH Hans (SUI),EKLIND Ivan (SWE),429,1164,ITA,FRA
+1938,"14 Jun 1938 - 18:00 ",Quarter-finals,Stade du Parc Lescure,"Bordeaux ",Brazil,2,1,Czechoslovakia," ",18141,0,1,CAPDEVILLE Georges (FRA),MARENCO Paul (FRA),KISSENBERGER Ernest (FRA),429,1153,BRA,TCH

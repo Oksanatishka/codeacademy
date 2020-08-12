@@ -1,0 +1,120 @@
+VR https://aframe.io/
+
+How to Make a Budget
+Creating a budget is an essential step of ensuring you will always have enough money to meet your needs and establish financial independence. Our in-house data scientist Catherine Zhou has a straight-forward way to think about your budget. You simply need to calculate five numbers.
+Total Monthly Income - You can calculate this by adding the totals on your post-tax paychecks for a month.
+Recurring Expenses - This includes rent or mortgage which should be less or equal to 30% of your monthly income. Recurring expenses also include bills like electricity, internet, gas, phone, and water. This category also accounts for an average spent on food and restaurants, other subscriptions, and fixed expenses. It helps to analyze these categories to spot places where you could be saving by changing habits or providers.
+The next two categories are a function of the difference between your total monthly income and your recurring expenses:
+Savings - At least 50% of your leftover income should go to your savings. Financial advisors recommend having at least 3 months of your monthly recurring expenses in your checking account in case of an emergency. After you’ve saved for a rainy day, you should consider investing. How much you allocate to the different types of investments will depend on your personal goals. Ask yourself: do you need cash you can withdraw in the coming years, or do you need money that can grow over time without touching it?
+Discretionary Income - What is left over after you spend and save your money in the categories above? Discretionary income is what you can use for recreation and entertainment.
+You can use a simple spreadsheet to formulate a budget with these numbers. Forbes recommended these 12 apps as tools to use for tracking your monthly spending habits.
+    https://www.forbes.com/sites/samanthasharf/2016/03/02/12-free-apps-to-track-your-spending-and-how-to-pick-the-best-one-for-you/#7e2ef7715445
+
+-----------------------------------------------------------
+What is a Credit Score?
+Credit score who?
+A credit score is a figure that essentially summarizes how likely a person is to repay debt. Credit scores are personal and they are calculated based on a number of factors. There are a few ways to calculate your score, depending on which model you use. In this case, we’re going to use FICO’s scoring system.
+    https://www.fico.com/en/products/fico-score
+
+Why should you care?
+Credit scores play an important role in adult life because they are used by banks, loan providers, and even retailers to determine things like how much money your credit line has, if you can get a loan, and even the price you have to pay up front for that new smartphone you want.
+
+Ok, what goes into a score?
+Scores are calculated based on a few factors, which have different weights on how much they affect your score.
+
+Factor	Weight
+Payment History	35%
+Credit Utilization	30%
+Length of Credit History	15%
+New Credit	10%
+Credit Mix	10%
+So what does a good score look like?
+A score over 690 points is considered “good”. You can see the ranges of scores in the image on the right.
+
+Tips
+Some good practices to keep in mind in order to build a good score are:
+    - Keep your credit spending low; you want to keep your credit utilization under 20% (if you have a $1,000 credit line, make sure you only owe $200 when a payment period is closing)—you can pay part of your credit card bill before the payment period is over to make sure that you don’t exceed the 20% credit utilization number
+    - Start early, the longer you have accounts that contribute to your credit history, the better
+    - Don’t open a lot of accounts at the same time or close to each other; this will lower your credit history length
+    - Be responsible! Don’t put yourself in situations where you know you are going to default on a payment, for example, as that will tarnish your record and make it more difficult to increase your score in the future
+Learn More
+You can read more about credit scores on the US Government’s official website.
+    https://www.usa.gov/credit-reports
+-----------------------------------------------------------
+What is Loan Interest?
+Whether you are taking out student loans, a mortgage, or a personal loan, understanding how interest works is an important part of assessing the terms on any loan.
+For example, one could reasonably think that taking out a $15,000 loan with 5% interest might end up costing close to $15,750 because 5% of $15,000 is $750. But this would be wrong, depending on how long it takes you to pay it off, it might look more like $20,000 when you finish paying it off.
+Understanding basic terms
+When you borrow money, the principal is the actual amount of money you are borrowing. The interest rate is the percentage of the principal you are being charged for borrowing that amount.
+What factors influence the interest rate?
+Interest rates can vary widely depending on the type of loan. While automobile and home loans currently start around 3%, the interest rate for federal undergraduate student loans increased to 5% in 2017, and credit card interest averaged 16%. Other factors that can impact the amount of interest you owe are the length of time taken to repay the loan, as well as whether the loan is subsidized by the government (federal loans).
+What is compounding interest?
+When you take out a loan, you should look at how the interest accrues — as in, whether the interest is charged daily, monthly, or annually. Compounding interest is interest that builds on top of your interest.
+To understand how this works, let’s imagine you took out a $10,000 student loan with a 4.45% interest rate that accrues daily. The interest continues to build every day of the year. Therefore, your daily interest rate is about 0.012% - this comes out to $1.20 per day ($10,000*0.012% = $1.20). The following day, your new loan balance climbs to $10,001.2. When another 0.012% of interest is added the following day, it will be on this new amount.
+By the end of the year, you owe $455.02 in interest on your student loan, rather than the $445 you’d pay if your interest was compounded just once a year instead of daily.
+How do I reduce interest paid?
+There are several steps you can take to reduce the amount of interest you have to pay. When you receive your monthly loan statement, paying more than the monthly minimum will cover the interest that has compounded, and will reduce your remaining principal on the loan. Budgeting as little as an extra $20 to $30 per month above your minimum balance can end up saving you hundreds of dollars in the long run. If you have multiple loans with different interest rates, aim to pay off the loans with the highest interest rate first by covering the minimum balance on all loans and putting the extra payment amount towards your highest interest loan.
+Here is an online calculator to help you calculate how much more quickly you can pay off your debt by making extra payments.
+    https://www.calcxml.com/calculators/extra-payment-calculator
+-----------------------------------------------------------
+Saving for Retirement
+Saving for retirement is an important part of accumulating wealth for the future and ensuring you’ll be financially independent during your golden years. But saving for retirement can come with its own learning curve and a whole lot of new acronyms you may have never heard before. This exercise will explore some of the most popular American retirement plans.
+
+What are my options when it comes to retirement accounts?
+When it comes to retirement accounts, there are two common categories: 401ks and IRAs. The key difference between them is that 401ks allow those under the age of 50 to contribute up to $19,000 per year (as of Jan 2019), while IRAs allow up to $6,000. It is important to note that, while 401ks are typically more well-known due to popular employer-matching programs, both can be used together to maximize benefits.
+
+These two categories of retirement plans can be broken down into different types, which often differ in their tax benefits. For example, the most common types of retirement plans are traditional and roth, which essentially translate to ‘before-tax’ and ‘after-tax.’ With traditional retirement plans, your contribution is made before you pay taxes on your income to the government, requiring that you pay later when it’s time to withdraw money from your account. Roth retirement plans, on the other hand, allow you to contribute after you’ve already paid taxes on your income, meaning that you will be able to claim your money without having to pay anymore taxes when withdrawal time comes.
+
+It is also important to know that, regardless of the kind(s) of retirement account(s) you have, the growth of your retirement money is dependent on tax rates, inflation, interest, and fees charged by the companies that run your account. This means that it is extremely important to understand how your retirement plan works before you blindly invest.
+
+For more details and information, here are a few resources:
+    The National Retirement Risk Index by the Center for Retirement Research
+        https://www.epi.org/publication/retirement-in-america/
+    Retirement Plans with John Oliver (VIDEO)
+        https://www.youtube.com/watch?v=gvZSpET11ZY
+    The National Retirement Risk Index by the Center for Retirement Research
+    The Retirement Savings Drain: Hidden and Excessive Costs of 401(K)s by Robert Hiltonsmith
+        https://www.demos.org/research/retirement-savings-drain-hidden-excessive-costs-401ks
+-----------------------------------------------------------
+How to Pick a Health Insurance Plan
+Choosing a health insurance plan is an important but sometimes daunting task. The first step is to figure out what your options are. Many employers offer health insurance as an employment benefit and the options they provide are usually more cost effective than your options as an individual. If you are unsure about the options provided by your employer, contact them for more information. If you do not have access to healthcare through your employer, you can get insurance through a federal or state exchange. Likely, https://www.healthcare.gov/ is the best place to start and see what options are available to you.
+After gathering your options, there will be several to choose from. The four major types of plans are:
+    - Exclusive Provider Organization (EPO) - Provide a network of doctors that you are required to use except for emergencies. When seeking specialist services, no referrals are required. This is a lower cost plan, but still allows you to see specialists without referrals.
+    - Health Maintenance Organization (HMO) - Similar to EPO, an HMO requires you use their network of doctors. However, you also typically need your primary care doctor to provide referrals for specialist services. This tends to be a lower cost plan, and best used with a primary care doctor who is involved in the other services you are using.
+    - Point of Service (POS) - This type of plan also has a network of doctors, but you can go out of network with a referral from an in network doctor. You also need a referral to see specialists. This plan provides a bit more flexibility since any doctor is available to you with a referral.
+    - Preferred Provider Organization (PPO) - This plan is the most flexible. You can see in-network doctors or out-of-network doctors, though in-network is usually less expensive. You also do not need to get a referral prior to seeing a specialist.
+You should also evaluate the networks of each of your plan options to ensure that the doctors that you want to use are going to be included in your insurance plan’s network. If you are using POS or PPO, you may be able to use doctors out of network, but they will likely be more expensive than the in network providers.
+The final thing to consider is your out of pocket costs throughout the year for annual deductibles and copays. Annual deductibles are amounts that you are responsible within the coverage year before your stated insurance benefits start paying for coverage. Copays are amounts that you are responsible for and generally apply to every visit. They typically differ depending on the type of provider you are visiting (primary care visit, specialist, emergency, etc.)
+Whichever plan you end up selecting, ensure that you budget appropriately for out of pocket costs and that you receive the correct coverage from your insurance each visit. Many plans also include no-cost well visits, like physicals, so make sure to schedule one with your doctor!
+-----------------------------------------------------------
+How to File your Income Taxes
+Filing for taxes is required by federal and state law in most countries. We will focus on the income tax process in the United States. This process will vary in implementation if you are “self-employed” vs if you are someone who has an employer. If you were a paid employee, your employee will give you a special form.
+If this is your first time filing your taxes, here is some terminology that might sound intimidating when you first hear them:
+    - W-2 Forms from all employers you (and your spouse, if filing a joint return) worked for during the past tax year. Your employer will usually mail this to your address on file or give you access to a digital copy online. Feel free to reach out to Human Resources at your company if you do not
+    - 1099 Forms if you (or your spouse) completed contract work and earned more than $600. The contractor will usually mail this to your address on file or give you access to a digital copy online.
+The IRS provides a handy Tax Form. We recommend using online services such as Turbo Tax. If you are self-employed, know that you should keep track of all of your job-related expenses since this will help reduce your taxable income. This process is a bit more involved so it might require help from an accountant your first time around.
+    https://www.irs.com/articles/tax-form-checklist
+-----------------------------------------------------------
+How to Remove Stains from Clothing
+Another soft skill we all wish we’d learn in school is a bit more practical, getting rid of stains can be very tricky and ruin an outfit you love. Picture this: you’re about to walk out the door to go to work when you realize that you’ve spilled coffee on your shirt! What should you?
+It might be tempting to throw your shirt in the washing machine, but that’s almost always the wrong decision. Washing your stained clothes could actually cause the stain to set, making it impossible to get out later.
+Instead, get your laundry detergent (or dish soap, if you don’t have liquid detergent on hand). Pour a small amount of detergent or dish soap onto the stain, followed by a drop or two of water. Use your index finger or a toothbrush to rub the detergent into the stain. If the stain doesn’t come out right away, try leaving the detergent on the stain for a couple hours and then trying again.
+If the above method doesn’t work, rubbing alcohol (good for pen marks) or vinegar could also help. For small blood stains, using hydrogen peroxide should do the trick.
+Once the stain is no longer visible, wash your clothes as normal, and they should come out of the laundry good as new!
+-----------------------------------------------------------
+How to Use LinkedIn
+LinkedIn has a user base of hundreds of millions of workers, making it one of the best tools for recruiters to source candidates for roles they are hoping to fill. By adding keywords to your profile that describe your skills, you can increase the odds that your profile will appear the next time a recruiter does a search.
+Here’s how to cover the basics:
+    - Add your location. Be specific to the distance you are willing to commute or move. Recruiters are typically looking to fill a role in a particular location, and candidates are most likely to be interested when a new opportunity matches their existing region.
+    - Add your core skills. These are the keywords that describe the core competency of the role the recruiter is trying to fill. Not sure of what describes you? Find a job posting that describes what you currently do and identify the primary qualifications.
+    - Add a summary. Write one to two paragraphs that clearly and concisely describes your experience and why a prospective recruiter might find you to be valuable in an open role.
+    - Include key accomplishments in your experience sections. If you’re only including your job title and employer name, your profile has room for improvement. The accomplishments section of each job experience is an opportunity for you to disclose the detailed impact that you made and specific technologies you’ve used.
+    - Get endorsed. Reach out to your current and former colleagues to get their endorsement of your skill set — this signals to recruiters that you’re not just making it up. Endorsements show the people who are willing to put their name behind your abilities.
+-----------------------------------------------------------
+How to Have Healthier Relationships
+In school, we may learn about covalent bonds and trigonometry proofs but seldom do we learn about navigating relationships with other human beings. In my 20s, I realized that I graduated from university before I discovered what a healthy relationship feels like. And I’m not the only one. So, let’s talk about it!
+To start, when thinking about relationships, we must identify that relationships come in many forms. Relationships are our connections with family, friends, co-workers, and other people in our lives. Any relationship in our life has the ability to be healthy or unhealthy. Identifying this helps us recognize our needs and relationship patterns in our lives.
+Practicing mutual empathy is another important step toward healthier relationships. This means balancing the support and emotional investment between the parties involved in the relationship. At work, this looks like a manager who coaches you as you work diligently on a project. A professional relationship involves mutual respect and dedication to your roles. In your love life, this looks like your significant other and you supporting each others’ interests, even when they aren’t shared. Regardless of your differences in taste, you root one another on when doing the things that bring you joy.
+Lastly, establishing boundaries is crucial to healthy relationships. You could have a parent or friend who loves you, however, they can be a little, well, overbearing. While their actions don’t change your love for one another, they make you a bit uncomfortable. This relationship simply needs some boundaries to make it healthier! Consider setting aside “us” time with that person! Schedule a 30-minute phone call or weekly visit and be ready to talk about two or three things that happened that past week that you are totally comfortable sharing with them. As people who love one another, you’re very happy to have a look into each other’s lives, but you focus on topics you’re ready to share.
+It’s important to note that valuing only one relationship isn’t going to make your life feel full or whole. Practice having multiple important people in your life that fulfill different aspects of you. And remember, the most important relationship in your life is with yourself!
+-----------------------------------------------------------

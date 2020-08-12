@@ -1,0 +1,40 @@
+-- Comment: Getting Started:
+SELECT * FROM stream LIMIT 20;
+SELECT * FROM chat LIMIT 20;
+SELECT DISTINCT game FROM stream;                   -- Comment: unique games in the stream table
+SELECT DISTINCT channel FROM stream;                -- Comment: unique channels in the stream table
+
+-- Comment: Aggregate Functions:
+SELECT game, COUNT(*) FROM stream GROUP BY game ORDER BY COUNT(*) DESC;     -- Comment: the most popular games in the stream table. Create a list of games and their number of viewers.
+-- Comment: or this syntax: SELECT game, COUNT(*) FROM stream GROUP BY 1 ORDER BY 2 DESC;
+
+-- Comment: Where are these LoL stream viewers located?Create a list of countries and their number of LoL viewers
+SELECT country, COUNT(*) FROM stream WHERE game='League of Legends' GROUP BY 1 ORDER BY 2 DESC;
+
+-- Comment: Create a list of players and their number of streamers.
+SELECT player, COUNT(*) FROM stream GROUP BY 1
+ORDER BY 2 DESC;
+
+SELECT game,
+ CASE
+  WHEN game = 'Dota 2' THEN 'MOBA'
+  WHEN game = 'League of Legends' THEN 'MOBA'
+  WHEN game = 'Heroes of the Storm' THEN 'MOBA'
+  WHEN game = 'Counter-Strike: Global Offensive' THEN 'FPS'
+  WHEN game = 'DayZ' THEN 'Survival'
+  WHEN game = 'ARK: Survival Evolved' THEN 'Survival'
+  ELSE 'Other'
+  END AS 'genre',
+  COUNT(*)
+FROM stream
+GROUP BY 1
+ORDER BY 3 DESC; 
+
+-- Comment: How does view count change in the course of a day?
+SELECT time FROM stream LIMIT 10;
+-- Comment: strftime() fn - allows to return a formatted date.
+SELECT time, strftime('%S', time) FROM stream GROUP BY 1 LIMIT 20;
+SELECT strftime('%H', time), COUNT(*) FROM stream WHERE country = 'US' GROUP BY 1;
+
+-- Comment: Joining the two tables:
+SELECT * FROM stream JOIN chat ON stream.device_id = chat.device_id;

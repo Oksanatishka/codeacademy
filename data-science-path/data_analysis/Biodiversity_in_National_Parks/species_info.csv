@@ -1,0 +1,50 @@
+category,scientific_name,common_names,conservation_status
+Mammal,Clethrionomys gapperi gapperi,Gapper's Red-Backed Vole,
+Mammal,Bos bison,"American Bison, Bison",
+Mammal,Bos taurus,"Aurochs, Aurochs, Domestic Cattle (Feral), Domesticated Cattle",
+Mammal,Ovis aries,"Domestic Sheep, Mouflon, Red Sheep, Sheep (Feral)",
+Mammal,Cervus elaphus,Wapiti Or Elk,
+Mammal,Odocoileus virginianus,White-Tailed Deer,
+Mammal,Sus scrofa,"Feral Hog, Wild Pig",
+Mammal,Canis latrans,Coyote,Species of Concern
+Mammal,Canis lupus,Gray Wolf,Endangered
+Mammal,Canis rufus,Red Wolf,Endangered
+Mammal,Urocyon cinereoargenteus,"Common Gray Fox, Gray Fox",
+Mammal,Vulpes fulva,"Black Fox, Cross Fox, Red Fox, Silver Fox",
+Mammal,Vulpes vulpes,Red Fox,
+Mammal,Felis concolor,Mountain Lion,
+Mammal,Felis silvestris,"Wild Cat, Wildcat",
+Mammal,Lynx rufus,Bobcat,
+Mammal,Puma concolor,Panther (Mountain Lion),
+Mammal,Mephitis mephitis,Striped Skunk,
+Mammal,Spilogale putorius,Eastern Spotted Skunk,
+Mammal,Lontra canadensis,River Otter,
+Mammal,Lutra canadensis,Northern River Otter,
+Mammal,Martes pennanti,Fisher,
+Mammal,Mustela,Mink (Or Weasel),
+Mammal,Mustela frenata,Long-Tailed Weasel,
+Mammal,Mustela nivalis,Least Weasel,
+Mammal,Mustela vison,Mink,
+Mammal,Procyon lotor,"Common Raccoon, Raccoon",
+Mammal,Ursus americanus,Black Bear,
+Mammal,Corynorhinus rafinesquii,Rafinesque's Big-Eared Bat,
+Mammal,Eptesicus fuscus,Big Brown Bat,Species of Concern
+Mammal,Lasionycteris noctivagans,Silver-Haired Bat,Species of Concern
+Mammal,Lasiurus borealis,"Eastern Red Bat, Red Bat",
+Mammal,Lasiurus cinereus,Hoary Bat,
+Mammal,Myotis austroriparius,"Mississippi Myotis, Southeastern Myotis",Species of Concern
+Mammal,Myotis grisescens,Gray Myotis,Endangered
+Mammal,Myotis keenii,Keen's Myotis,Species of Concern
+Mammal,Myotis leibii,"Eastern Small-Footed Bat, Eastern Small-Footed Myotis",Species of Concern
+Mammal,Myotis lucifugus,"Little Brown Bat, Little Brown Myotis",Species of Concern
+Mammal,Myotis septentrionalis,"Northern Long-Eared Bat, Northern Myotis",Threatened
+Mammal,Myotis sodalis,"Indiana Bat, Indiana Or Social Myotis",Endangered
+Mammal,Nycticeius humeralis,Evening Bat,
+Mammal,Pipistrellus subflavus,Eastern Pipistrelle,
+Mammal,Didelphis virginiana,"Virginia Opossum, Virginia Oppossum",
+Mammal,Lepus americanus,Snowshoe Hare,
+Mammal,Sylvilagus floridanus,Eastern Cottontail,
+Mammal,Sylvilagus obscurus,Appalachian Cottontail,
+Mammal,Sylvilagus transitionalis,New England Cottontail,
+Mammal,Equus caballus,"Feral Horse, Horse",
+Mammal,Homo sapiens,"Human, Humans, Man",

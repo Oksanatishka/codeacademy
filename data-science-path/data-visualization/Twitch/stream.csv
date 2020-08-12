@@ -1,0 +1,50 @@
+time,device_id,login,channel,country,player,game,stream_format,subscriber
+2015-01-01 18:33:52,40ffc2fa6534cf760becbdbf5311e31ad069e46e,085c1eb7b587bfe654f0df7b4ba7f4fc4013636c,frank,US,iphone_t,League of Legends,,
+2015-01-01 23:35:33,9a8cc2b7162b99c0a0f501dc9a5ec4f68586a760,5ad49a7b408ce452140b180dd6efb57a9f4d22c7,george,US,site,DayZ,chunked,false
+2015-01-01 04:39:38,2f9c3f9ee1033b71a3819564243f20ef3bec0183,5b9a43e68f019185f55615d0b83019dee4b5d06f,frank,US,site,League of Legends,chunked,false
+2015-01-01 11:15:30,0cda8226ba2583424c80c3c1c22c1256b080ad17,02c7797faa4d8a3ff4b0c14ee1764b6817b53d0b,estelle,CH,site,Dota 2,high,false
+2015-01-01 11:28:19,e3288ca5e3153aa85e32f64cdd994b7666968dcf,b920c228acbcbebee26d9c79f6eb73b73a9480c7,morty,FR,site,Heroes of the Storm,medium,false
+2015-01-01 23:27:36,343fe2bfd58595d5c18602d420ecf6f9d694d5a8,7814f661a54349ff5eee84f9d6f476918c9b7270,george,US,iphone_t,DayZ,,
+2015-01-01 21:09:23,80a0c7d1abb6a5a0060e18202b77bef831e08ca5,eb158cab3f606d3894a32e20bddbfd2d589095a9,frank,US,site,League of Legends,high,true
+2015-01-01 19:14:27,1e342e5e4e228f617449029054b3bb19c5224528,2aaf6a414bc3dc923b04f986de7ba1b8101c6698,frank,CA,site,League of Legends,high,false
+2015-01-01 13:51:04,272cffbb1a9a33ad3bb48a2ee9ae5cbcac5ca22e,401716920e3435b5e3eec9fc4ccd6a44c7af38f5,kramer,TR,site,Counter-Strike: Global Offensive,chunked,false
+2015-01-01 22:00:14,593ed161c456eeeb9e18b8005786d42abc1a7373,ef24dc49ceb4bcd3cccb0fa862d8a150ecf935e1,frank,US,site,League of Legends,medium,false
+2015-01-01 19:10:58,16679ceba8bf5fb10f253e51f9a286c11b011e02,3b8deb77fb36b6147c27cbdb82a925aaf26b629b,jerry,RU,embed,Dota 2,chunked,false
+2015-01-01 22:59:56,1a247324beabdb85b2b8a97472f28f6cf9026fe1,c485d2914068876ebd6cf3ee6812dc939abae8d7,frank,US,android,League of Legends,,
+2015-01-01 22:10:46,20bde4b4418df3ce2701869233e12b1b4a30da88,7abc32d6617b4a13b78dd2710f22fe8a2305f0fd,george,US,ipad_t,DayZ,,
+2015-01-01 13:46:00,21d94696c9b0f4f9eafc785a2d9d1be1982244b1,c2de0a4d1258e2fc093017d5a793a625af9a0d44,estelle,US,embed,Dota 2,high,false
+2015-01-01 10:07:45,5e3a498f6c671a42edfa3772c87c1c3dc918a511,ffec857d76dcf8cfee7f3a96028365f33964c823,morty,,ipad_t,Heroes of the Storm,,
+2015-01-01 21:04:20,2e7bcee08428c8ba8c5ce7d44a930dfee7f34db2,4fac13dc5b1cc9d3b18ad0ff62da2adb635375fd,frank,US,site,League of Legends,high,false
+2015-01-01 12:41:15,88b8d83a7ac64d30f2b3f54cc9d9c2a15bb2f666,9f2d3dcb56169dcdc0933d21004ce0f2e40b0df0,estelle,TR,site,Dota 2,high,false
+2015-01-01 21:30:35,53fc815c5fb6e8641dc8a60cf2cc480198a2ba17,122ab65809db2c8057c998d0664b2f54f5f6aa10,frank,US,android,League of Legends,,
+2015-01-01 22:03:58,f74aae10baab29ab434519adb4ad4f64f6d90727,3b954baa601d4cb22610dc4727543c697acbd4d6,frank,US,iphone_t,League of Legends,,
+2015-01-01 14:47:24,47d380927c426e589be566d4ae967cbb6f9d2d13,40b89a7097d30ecf1fe4591442f541ed500c5b8b,helen,CA,iphone_t,Hearthstone: Heroes of Warcraft,,
+2015-01-01 13:27:50,eb688ca9e1f99e184d86072eadd91c4ba6eb1a21,e8380cb9afca3151bc698910fe2f241c769c4653,estelle,PE,iphone_t,Dota 2,,
+2015-01-01 22:30:35,b91cf6ac0daae6135e43494116c5748e41795321,2838e587883b07fe52727e859ee794f6a977bd2a,george,US,iphone_t,DayZ,,
+2015-01-01 20:10:46,4418b6a58419b982780ef2f4fe6b7ab3eb2a273c,4171a0c82737dbe03ba2901979daadf979af3316,frank,AR,site,League of Legends,high,false
+2015-01-01 20:46:12,8d06b0f4272dbe5028110f0a853b0402a15cf916,f5f4f5619a44ce1826ba8ad10eeee712342aad34,george,US,site,DayZ,chunked,false
+2015-01-01 21:17:33,c37fb5b5eaf0b5366927c41d8a1574b40a1ebc25,4b937bf9d9b47242f8c8c1b99f9b686bdedfb61d,frank,SE,site,League of Legends,chunked,false
+2015-01-01 11:35:32,3549e0cbe90890071fbe7c5804bb2ab7cd486c14,740b260834d7d190b3623f68a2f4cd69b6aa0b9a,morty,CZ,site,Heroes of the Storm,chunked,false
+2015-01-01 19:26:59,f8ca29699768d336829bbaf68f77c60eca387a6e,d608368e5c52968aa4a6d5c8fec2e88197903523,jerry,US,home,Dota 2,,
+2015-01-01 13:51:15,ae1dd44ffe65fa99e32274ac7925aff31a052109,eec79f4d7b6bf2b29c8a01a1cb57852a55af6a62,kramer,IL,site,Counter-Strike: Global Offensive,chunked,false
+2015-01-01 19:10:57,1ddd6bd22e685b722a67a9dd5a1324c2c2cb55e6,b832fc1d6613c0a98fc23dcb8f396c0d1b9f53c2,newman,SE,ipad_t,The Binding of Isaac: Rebirth,,
+2015-01-01 03:49:36,4c3dec89d4bd86b27c1e072d59293e0666b0da46,b59d1e1328c07f2eccd560add9e4469956443562,frank,DE,site,League of Legends,medium,false
+2015-01-01 11:46:39,489025c349e21f434548d2c06bcccba522d86642,c0606b8c03da53b7ca658518a28262b4a2b8aaa2,kramer,FI,iphone_t,Counter-Strike: Global Offensive,,
+2015-01-01 14:13:52,38552ab8ba8803d5808b738167e43591196c7cfb,c683b1d6d08174c347d9068d3d95656b97e65708,kramer,EE,android,Counter-Strike: Global Offensive,,
+2015-01-01 15:01:42,c10db345cf7b85a256b1b2b4a3370e3512b3c95c,3d738a7aa040a1324e76caf1d6c8a3afe1f92d6f,helen,US,site,Hearthstone: Heroes of Warcraft,low,true
+2015-01-01 15:31:36,a760e915c62e6b204a3013a4b5bbe1717e20defe,8fa18f2e2b771c08e471ffe63057008db3cc43ee,kramer,GB,iphone_t,Agar.io,,
+2015-01-01 22:45:26,df0102b2638e7abac2f52a714cfd32a6307f3a67,3e49ad1a8771420bcd720c821222152aaf77fedb,george,US,ipad_t,DayZ,,
+2015-01-01 18:31:02,d1de44a33b88649feae46ffe2e56827231c5edd7,7ab508e5a1b483ef5ac69d3bbe587ef03bc5f1a7,helen,PT,site,Hearthstone: Heroes of Warcraft,high,false
+2015-01-01 15:48:24,97144e4bab2163d35dd88e6ec804436e8cdddd3d,4bbf4aa9f0abb1902d16555202f7ce61fc607305,frank,,iphone_t,League of Legends,,
+2015-01-01 11:14:06,ee5870d77c83cfcb278dadd46d01d139d7aeb5bc,eac04dd8550f628ad5efb4aa6cd535b2ef259563,estelle,DE,site,Dota 2,chunked,false
+2015-01-01 02:12:40,d795b7b380efd45cafc62465d13ecada06196e26,77ec39c861e7013a7496019e251b65f1f708903c,frank,ES,ipad_t,League of Legends,,
+2015-01-01 02:21:02,55654794bcac2406d2728e7faf97f6b1ee10e6c0,e0f067e8c060c23e949f5378f60f07d26e3cf1fe,frank,US,site,League of Legends,chunked,false
+2015-01-01 21:39:58,e2d0fb52fec68a7ef8c0e620d3d08d0b45dff635,19309886c6799d3dff0ae9c1cb4837d11f13812c,george,US,site,DayZ,medium,false
+2015-01-01 23:52:26,6be747011fa0d2abd70727824d704b85b2324e32,3265bb79c36d108b24c19922dd011ed2ddc4f409,george,CA,site,DayZ,chunked,true
+2015-01-01 13:39:23,84f580f5f833cfed32b2c7b9d09b7b13f6e54a70,e4a4dd31151d1239e74eacea19652fdd706fe3da,estelle,US,android,Dota 2,,
+2015-01-01 03:25:36,46ced12802a98051a1cbf3bf5a38c6abe00d369f,8574fbc81a230067cc4c3398784706927bd90a03,frank,RO,site,League of Legends,high,false
+2015-01-01 15:33:46,f96c50ca234577973a19ebee5a8594667f4f7e5b,3ab05811e175ee9bf4f694ee813a7f7f74f96f89,kramer,PL,ipad_t,Counter-Strike: Global Offensive,,
+2015-01-01 23:12:49,666758b04eaec0abdc01c1ce20e9198b5b388e03,7af01d4cb1b338e4e4ccc446c4fa7c71b1dedf9c,frank,US,android,League of Legends,,
+2015-01-01 18:45:04,3ae7d49e990f647dd7a9cf6b688c11576fc6e64d,312812270f547afe9730d07f5f67905f5c452228,morty,CL,site,Heroes of the Storm,low,false
+2015-01-01 07:11:43,1cf5c511cd3326e37752bf602927f22ba05e9d67,6e2e23d5f1bfc44228d027da2f97d4c3ef9d9810,elaine,TW,site,Gaming Talk Shows,chunked,false
+2015-01-01 11:51:24,bf9c6ba0b9e0b256a187205b7dd3601944e13a94,95369157a91db97ccebbd9d5c1d19387fe2410b0,estelle,FI,embed,Dota 2,chunked,false
